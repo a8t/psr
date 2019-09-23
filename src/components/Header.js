@@ -65,7 +65,7 @@ const Header = ({ location }) => (
               }}
             >
               <span className={'sr-only'}>Toggle navigation</span>
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
           </header>
 
