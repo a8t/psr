@@ -25,17 +25,7 @@ export default class HTML extends React.Component {
             />
           ) : null}
           <link rel="shortcut icon" type="image/svg" href={favicon} />
-          <link
-            rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-            crossOrigin="anonymous"
-          />
-          <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossOrigin="anonymous"
-          ></script>
+
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
@@ -46,17 +36,6 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            $(document).on('click','.navbar-collapse.in',function(e) {
-              if( $(e.target).is('a') ) {
-                $(this).collapse('hide');
-              }
-            });
-            `,
-            }}
-          />
         </body>
       </html>
     );

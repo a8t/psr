@@ -38,6 +38,8 @@ const plugins = [
       path: `${__dirname}/content/`,
     },
   },
+  `gatsby-plugin-sass`,
+
   {
     resolve: `gatsby-plugin-purgecss`,
     options: {

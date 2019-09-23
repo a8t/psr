@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Link from './link';
 import config from '../../config.js';
@@ -42,35 +42,39 @@ const Header = ({ location }) => (
         },
       } = data;
       const finalLogoLink = logo.link !== '' ? logo.link : '/';
-      return (
-        <div className={'navBarWrapper'}>
-          <nav className={'navbar navbar-default navBarDefault'}>
-            <header className={'navbar-header navBarHeader'}>
-              <Link to={finalLogoLink} className={'navbar-brand navBarBrand'}>
-                <img className={'img-responsive'} src={logoImg} alt={'logo'} />
-                <span className={'headerTitle'}>{headerTitle}</span>
-              </Link>
-              <button
-                type="button"
-                className={'navbar-toggle collapsed navBarToggle'}
-                data-toggle="collapse"
-                data-target="#navbar"
-                aria-expanded="false"
-                aria-controls="navbar"
-              >
-                <span className={'sr-only'}>Toggle navigation</span>
-                <span className={'icon-bar'}></span>
-                <span className={'icon-bar'}></span>
-                <span className={'icon-bar'}></span>
-              </button>
-            </header>
 
-            <div
-              id="navbar"
-              className={'navbar-collapse collapse navBarCollapse'}
+      const [isOpen, setIsOpen] = useState(false);
+
+      return (
+        <nav className={'navbar navbar-default navBarDefault navbar-light'}>
+          <header className={'navbar-header navBarHeader'}>
+            <Link to={finalLogoLink} className={'navbar-brand navBarBrand'}>
+              <img className={'img-responsive'} src={logoImg} alt={'logo'} />
+              <span className={'headerTitle'}>{headerTitle}</span>
+            </Link>
+            <button
+              type="button"
+              className={'navbar-toggler collapsed navBarToggle d-md-none'}
+              data-toggle="collapse"
+              data-target="#navbar"
+              aria-expanded="false"
+              aria-controls="navbar"
+              onClick={() => {
+                console.log('hi??');
+                setIsOpen(!isOpen);
+              }}
             >
-              <div className={'visible-xs'}></div>
-              {/* <ul className={'nav navbar-nav navBarUL navBarNav navbar-right navBarULRight'}>
+              <span className={'sr-only'}>Toggle navigation</span>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </header>
+
+          {isOpen && (
+            <div className="d-md-none">
+              <Sidebar />
+            </div>
+          )}
+          {/* <ul className={'nav navbar-nav navBarUL navBarNav navbar-right navBarULRight'}>
                 {headerLinks.map((link, key) => {
                   if(link.link !== '' && link.text !== '') {
                     return(
@@ -98,9 +102,7 @@ const Header = ({ location }) => (
                     <GitHubButton href={githubUrl} data-show-count="true" aria-label="Star on GitHub">Star</GitHubButton>
                   </li>) : null}
               </ul> */}
-            </div>
-          </nav>
-        </div>
+        </nav>
       );
     }}
   />

@@ -5,7 +5,7 @@ import mdxComponents from './mdxComponents';
 import Sidebar from './sidebar';
 import RightSidebar from './rightSidebar';
 import Header from './Header';
-import './styles.css';
+import './styles.scss';
 
 const Wrapper = styled('div')`
   display: flex;
@@ -47,13 +47,13 @@ const Layout = ({ children, location }) => (
 
     <MDXProvider components={mdxComponents}>
       <Wrapper>
-        <LeftSideBarWidth className={'hidden-xs'}>
+        <LeftSideBarWidth className={'d-none d-md-block'}>
           <Sidebar location={location} />
         </LeftSideBarWidth>
         <Content>
           <MaxWidth>{children}</MaxWidth>
         </Content>
-        <RightSideBarWidth className={'hidden-xs'}>
+        <RightSideBarWidth className={'d-none d-md-block'}>
           <RightSidebar location={location} />
         </RightSideBarWidth>
       </Wrapper>
