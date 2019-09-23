@@ -1,5 +1,7 @@
 ---
 title: "Author's Introduction"
+metaTitle: 'Philippine Society and Revolution'
+metaDescription: 'An analysis of Philippine society, a summary of the basic problems of the Filipino people, and a discussion of the solutions.'
 ---
 
 Philippine Society and Revolution is an attempt to present, in a comprehensive way from the standpoint of Marxism-Leninism-Mao Zedong Thought:
