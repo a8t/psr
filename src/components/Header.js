@@ -11,6 +11,7 @@ const Header = ({ location }) => (
         site {
           siteMetadata {
             headerTitle
+            headerShortTitle
             githubUrl
             helpUrl
             tweetText
@@ -33,6 +34,7 @@ const Header = ({ location }) => (
         site: {
           siteMetadata: {
             headerTitle,
+            headerShortTitle,
             githubUrl,
             helpUrl,
             tweetText,
@@ -50,7 +52,12 @@ const Header = ({ location }) => (
           <header className={'navbar-header navBarHeader'}>
             <Link to={finalLogoLink} className={'navbar-brand navBarBrand'}>
               <img className={'img-responsive'} src={logoImg} alt={'logo'} />
-              <span className={'headerTitle'}>{headerTitle}</span>
+              <span className={'headerTitle d-none d-md-block'}>
+                {headerTitle}
+              </span>
+              <span className={'headerTitle d-md-none'}>
+                {headerShortTitle}
+              </span>
             </Link>
             <button
               type="button"
@@ -60,7 +67,6 @@ const Header = ({ location }) => (
               aria-expanded="false"
               aria-controls="navbar"
               onClick={() => {
-                console.log('hi??');
                 setIsOpen(!isOpen);
               }}
             >

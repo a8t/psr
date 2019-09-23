@@ -67,6 +67,7 @@ module.exports = {
       image: config.header.logo,
     }, // backwards compatible
     headerTitle: config.header.title,
+    headerShortTitle: config.header.shortTitle,
     githubUrl: config.header.githubUrl,
     helpUrl: config.header.helpUrl,
     tweetText: config.header.tweetText,

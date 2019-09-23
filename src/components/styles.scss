@@ -141,7 +141,7 @@ pre {
 }
 
 .sideBarUL li a {
-  color: #fff;
+  color: #333;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
@@ -186,18 +186,22 @@ pre {
   background: transparent;
   border: none;
   outline: none;
-  margin-top: 7px;
-  position: absolute;
-  right: 20px;
-  z-index: 1;
+  position: relative;
+  top: -3px;
+  padding: 8px;
+  path {
+    stroke: #333;
+    fill: #333;
+  }
 }
 
 .hideFrontLine .active > a {
   background-color: #542683;
   color: #fff !important;
+  margin-right: 16px;
 }
 .firstLevel ul li .collapser svg path {
-  fill: #fff !important;
+  // fill: #fff !important;
 }
 .active .collapser > svg > path {
   fill: #663399 !important;
@@ -210,6 +214,7 @@ pre {
 .sideBarUL .item {
   list-style: none;
   padding: 0;
+  width: 300px;
 }
 .sideBarUL .item > a {
   color: #333;
