@@ -1,6 +1,6 @@
 ---
 title: 'Spanish Colonialism And Feudalism'
-metatitle: 'PSR | Spanish Colonialism And Feudalism'
+metaTitle: 'PSR | Spanish Colonialism And Feudalism'
 ---
 
 The absence of a political unity involving all or the majority of the people of the archipelago allowed the Spanish conquistadores to impose their will on the people step by step even with a few hundreds of colonial troops at the start. Magellan employed the standard tactic of divide-and-rule when in 1521 he sided with Humabon against Lapu-lapu. He started a pattern of inveigling certain barangays to adopt the Christian faith and then employing them against other barangays which resisted colonial domination. However, it was Legazpi who in 1565 and thereafter succeeded in hoodwinking a large number of barangay chieftains typified by Sikatuna in quelling recalcitrant barangays with the sword and in establishing under the cross the first colonial settlements in Visayas and subsequently in Luzon.

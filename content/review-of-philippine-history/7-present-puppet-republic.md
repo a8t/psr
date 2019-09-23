@@ -1,6 +1,6 @@
 ---
 title: 'The Present Puppet Republic Of The Philippines'
-metatitle: 'PSR | The Present Puppet Republic Of The Philippines'
+metaTitle: 'PSR | The Present Puppet Republic Of The Philippines'
 ---
 
 By waging a people’s war and building a people’s army against the Japanese fascists and their puppets, the Communist Party of the Philippines achieved the status of being a powerful instrument of the Filipino people and the position of being able to play a significant role in Philippine history. Before U.S. imperialism landed its troops in Luzon, the Hukbalahap under the leadership of the Party had liberated almost the entire region of Central Luzon, had organized provincial and municipal governments and had dispatched armed units to Manila and Southern Luzon.

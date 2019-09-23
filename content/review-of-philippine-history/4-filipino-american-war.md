@@ -1,6 +1,6 @@
 ---
 title: 'The Filipino-American War'
-metatitle: 'PSR | The Filipino-American War'
+metaTitle: 'PSR | The Filipino-American War'
 ---
 
 When Intramuros was already completely surrounded by the U.S. naval and land troops, diplomatic negotiations were secretly conducted by Admiral Dewey and the Spanish governor-general through the Belgian consul. These negotiations led to the agreement of stating a mock battle to justify the turnover of Manila to the U.S. imperialists by the Spanish colonialists and were parallel to negotiations being held abroad towards the general settlement of the Spanish-American War through the mediation of the French government.

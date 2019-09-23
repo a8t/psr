@@ -1,6 +1,6 @@
 ---
 title: 'The Colonial Rule Of US Imperialism'
-metatitle: 'PSR | The Colonial Rule Of US Imperialism'
+metaTitle: 'PSR | The Colonial Rule Of US Imperialism'
 ---
 
 The bestial conquest of the Filipino people by U.S. imperialism meant the continued status of the Philippines as a colony. U.S. imperialism came to frustrate the national and democratic aspirations of the Filipino people and to impose the will of the U.S. monopoly-capitalist class by force arms and double-talk. In the United States, the imperialist politicians and their capitalist masters boasted of their filthy work as a noble mission to “civilize” and Christianize” the Filipino people.
