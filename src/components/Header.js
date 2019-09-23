@@ -1,12 +1,9 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import GitHubButton from 'react-github-btn';
 import Link from './link';
-import './styles.css';
 import config from '../../config.js';
+import Sidebar from './sidebar';
 
-import Search from './search/index';
-const help = require('./images/help.svg');
 const isSearchEnabled =
   config.header.search && config.header.search.enabled ? true : false;
 
@@ -18,8 +15,6 @@ if (isSearchEnabled && config.header.search.indexName) {
     hitComp: `PageHit`,
   });
 }
-
-import Sidebar from './sidebar';
 
 const Header = ({ location }) => (
   <StaticQuery
