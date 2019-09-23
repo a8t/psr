@@ -7,7 +7,7 @@ const config = {
   header: {
     logo: '',
     logoLink: '/',
-    title: 'Philippine Society and Revolution',
+    title: 'PSR',
     githubUrl: '',
     helpUrl: '',
     tweetText: '',
