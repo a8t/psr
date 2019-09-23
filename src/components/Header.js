@@ -4,18 +4,6 @@ import Link from './link';
 import config from '../../config.js';
 import Sidebar from './sidebar';
 
-const isSearchEnabled =
-  config.header.search && config.header.search.enabled ? true : false;
-
-let searchIndices = [];
-if (isSearchEnabled && config.header.search.indexName) {
-  searchIndices.push({
-    name: `${config.header.search.indexName}`,
-    title: `Results`,
-    hitComp: `PageHit`,
-  });
-}
-
 const Header = ({ location }) => (
   <StaticQuery
     query={graphql`
@@ -76,24 +64,12 @@ const Header = ({ location }) => (
                 <span className={'icon-bar'}></span>
               </button>
             </header>
-            {/* {isSearchEnabled ? (
-              <div className={'searchWrapper hidden-xs navBarUL'}>
-                <Search collapse indices={searchIndices} />
-              </div>
-            ) : null} */}
+
             <div
               id="navbar"
               className={'navbar-collapse collapse navBarCollapse'}
             >
-              <div className={'visible-xs'}>
-                <Sidebar location={location} />
-                {/* <hr />
-                {isSearchEnabled ? (
-                  <div className={'searchWrapper navBarUL'}>
-                    <Search collapse indices={searchIndices} />
-                  </div>
-                ) : null} */}
-              </div>
+              <div className={'visible-xs'}></div>
               {/* <ul className={'nav navbar-nav navBarUL navBarNav navbar-right navBarULRight'}>
                 {headerLinks.map((link, key) => {
                   if(link.link !== '' && link.text !== '') {

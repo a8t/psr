@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'react-emotion';
 import { MDXProvider } from '@mdx-js/react';
-import ThemeProvider from './themeProvider';
 import mdxComponents from './mdxComponents';
 import Sidebar from './sidebar';
 import RightSidebar from './rightSidebar';
+import Header from './Header';
+import './styles.css';
 
 const Wrapper = styled('div')`
   display: flex;
@@ -41,7 +42,9 @@ const RightSideBarWidth = styled('div')`
   width: 224px;
 `;
 const Layout = ({ children, location }) => (
-  <ThemeProvider location={location}>
+  <>
+    <Header location={location} />
+
     <MDXProvider components={mdxComponents}>
       <Wrapper>
         <LeftSideBarWidth className={'hidden-xs'}>
@@ -55,7 +58,7 @@ const Layout = ({ children, location }) => (
         </RightSideBarWidth>
       </Wrapper>
     </MDXProvider>
-  </ThemeProvider>
+  </>
 );
 
 export default Layout;

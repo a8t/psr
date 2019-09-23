@@ -1,7 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'react-emotion';
-import './styles.css';
 import config from '../../config';
 
 const Sidebar = styled('aside')`
