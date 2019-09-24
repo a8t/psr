@@ -1,6 +1,6 @@
 ---
-title: 'The People's Struggle Against Japanese Imperialism'
-metaTitle: 'PSR | The People's Struggle Against Japanese Imperialism'
+title: "The People's Struggle Against Japanese Imperialism"
+metaTitle: "PSR | The People's Struggle Against Japanese Imperialism"
 ---
 
 In the period following World War I, U.S. and British imperialism assigned Japan the role of being their special sentry at the backdoor of the first socialist state and principal Asian collaborator in the colonization of the Asian peoples. Japan was accorded the privilege of holding on to its old colonies and acquiring new ones so long as it did not challenge the Anglo-American hegemony. In the Philippines, Japanese enterprises were encouraged by U.S. imperialism to participate in the exploitation of the Filipino people, especially in Mindanao. However, the world capitalist crisis of the thirties shook the balance of power among and within the imperialist countries and fascism rose to power in a number of capitalist countries, including Japan, to threaten the peoples of the world.
