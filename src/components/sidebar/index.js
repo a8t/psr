@@ -1,6 +1,6 @@
 import React from 'react';
 import Tree from './tree';
-import { StaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'react-emotion';
 import config from '../../../config';
 
@@ -59,32 +59,29 @@ const Divider = styled(props => (
   }
 `;
 
-const SidebarLayout = ({ location }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allMdx {
-          edges {
-            node {
-              fields {
-                slug
-                title
-              }
-            }
+const query = graphql`
+  query {
+    allMdx {
+      edges {
+        node {
+          fields {
+            slug
+            title
           }
         }
       }
-    `}
-    render={({ allMdx }) => {
-      return (
-        <Sidebar>
-          <ul className={'sideBarUL'}>
-            <Tree edges={allMdx.edges} />
-          </ul>
-        </Sidebar>
-      );
-    }}
-  />
-);
+    }
+  }
+`;
 
+const SidebarLayout = ({ location }) => {
+  const { allMdx } = useStaticQuery(query);
+  return (
+    <Sidebar>
+      <ul className={'sideBarUL'}>
+        <Tree edges={allMdx.edges} />
+      </ul>
+    </Sidebar>
+  );
+};
 export default SidebarLayout;
