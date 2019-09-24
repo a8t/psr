@@ -30,6 +30,7 @@
     "gatsby-plugin-sharp": "^2.2.11",
     "gatsby-plugin-sitemap": "^2.2.6",
     "gatsby-plugin-styled-components": "^3.1.2",
+    "gatsby-plugin-typescript": "^2.1.9",
     "gatsby-remark-copy-linked-files": "^2.1.5",
     "gatsby-remark-images": "^3.1.11",
     "gatsby-source-filesystem": "^2.1.9",
@@ -49,7 +50,8 @@
     "react-live": "^2.1.2",
     "styled-components": "^4.3.2",
     "styled-icons": "^8.3.0",
-    "system-components": "^3.0.3"
+    "system-components": "^3.0.3",
+    "typescript": "^3.6.3"
   },
   "license": "MIT",
   "main": "n/a",
