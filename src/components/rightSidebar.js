@@ -31,6 +31,7 @@ const ListItem = styled(({ className, active, level, ...props }) => {
   list-style: none;
 
   a {
+    width: 150px;
     color: #5c6975;
     text-decoration: none;
     font-weight: ${({ level }) => (level === 0 ? 700 : 400)};
