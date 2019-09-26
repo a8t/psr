@@ -77,7 +77,6 @@ const SidebarLayout = ({ location, onLinkClick }) => {
   const { title, urlPathSegment, childNodes } = sortTreeData(
     treeify(filterIndexIfRequired(allMdx.edges))
   );
-
   return (
     <Sidebar>
       <ul className={'sideBarUL'}>
@@ -90,6 +89,7 @@ const SidebarLayout = ({ location, onLinkClick }) => {
             parentSlug=""
             childNodes={childNodes}
             isFirstLevel={true}
+            location={location}
           />
         ))}
       </ul>

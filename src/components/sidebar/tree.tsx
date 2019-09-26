@@ -20,25 +20,28 @@ const Tree = ({
   parentSlug,
   childNodes,
   isFirstLevel,
+  location,
 }) => {
   const [collapsed, setCollapsed] = useState(false);
   const toggle = () => setCollapsed(!collapsed);
 
-  const active = false;
-  // location &&
-  // (location.pathname === url ||
-  //   location.pathname === config.gatsby.pathPrefix + url);
+  const url = parentSlug + slug;
+
+  const active =
+    location &&
+    (location.pathname === url ||
+      location.pathname === config.gatsby.pathPrefix + url);
 
   const hasChildren = childNodes.length !== 0;
 
   const calculatedClassName = `${
     config.sidebar.frontLine ? 'showFrontLine' : 'hideFrontLine'
-  } ${isFirstLevel ? 'firstLevel' : ''} item ${active ? 'active' : ''}`;
+  } ${isFirstLevel ? 'firstLevel' : ''} item `;
 
   return (
     <li className={calculatedClassName}>
       <Header>
-        <Link to={parentSlug + slug} onClick={onLinkClick}>
+        <Link to={url} onClick={onLinkClick} className={active ? 'active' : ''}>
           {title}
         </Link>
         {!config.sidebar.frontLine && title && hasChildren && (
@@ -59,6 +62,7 @@ const Tree = ({
               childNodes={childNodes}
               parentSlug={parentSlug}
               isFirstLevel={false}
+              location={location}
             />
           ))}
         </ul>
