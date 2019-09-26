@@ -71,7 +71,7 @@ const query = graphql`
   }
 `;
 
-const SidebarLayout = ({ location }) => {
+const SidebarLayout = ({ location, onLinkClick }) => {
   const { allMdx } = useStaticQuery(query);
 
   const { title, urlPathSegment, childNodes } = sortTreeData(
@@ -83,6 +83,7 @@ const SidebarLayout = ({ location }) => {
       <ul className={'sideBarUL'}>
         {childNodes.map(({ title, slug, childNodes }) => (
           <Tree
+            onLinkClick={onLinkClick}
             key={title}
             title={title}
             slug={slug}
