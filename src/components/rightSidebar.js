@@ -7,7 +7,6 @@ const Sidebar = styled('aside')`
   width: 100%;
   background-color: #fff;
   border-right: 1px solid #ede7f3;
-  height: 100vh;
   overflow: auto;
   position: fixed;
   padding-left: 24px;

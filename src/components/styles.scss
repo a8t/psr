@@ -21,6 +21,13 @@ a {
   color: #663399;
 }
 
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eee;
+}
+
 .divider {
   height: 30px;
   margin: 0 15px;
@@ -133,7 +140,6 @@ pre {
 
 .sideBarUL {
   margin-top: 32px;
-  display: flex;
   min-width: 300px;
   overflow: hidden;
 
@@ -169,10 +175,11 @@ pre {
 
 .rightSideBarUL {
   margin-top: 32px;
+  padding-left: 8px;
+  border-left: 1px solid #e6ecf1;
+  border-left-color: rgb(230, 236, 241);
   li {
     list-style-type: none;
-    border-left: 1px solid #e6ecf1;
-    border-left-color: rgb(230, 236, 241);
     a {
       font-size: 12px;
       font-weight: 500;
@@ -190,10 +197,6 @@ pre {
     position: relative;
     top: -3px;
     padding: 8px;
-    path {
-      stroke: #333;
-      fill: #333;
-    }
   }
 
   .active > a {
@@ -205,13 +208,20 @@ pre {
 
 .collapser {
   margin-left: 2px;
+
+  svg > path {
+    stroke: #d9c6ec;
+    fill: #ddd !important;
+    stroke-linecap: round;
+  }
+
   &:hover svg > path {
     fill: #663399 !important;
   }
 }
 
 .firstLevel .item {
-  border-left: 1px solid #e6ecf1;
+  border-left: 1px solid #d9c6ec;
 }
 
 .sideBarUL .item {
@@ -227,9 +237,11 @@ pre {
   width: 100%;
 }
 
-.sideBarUL li.item header:hover {
-  background-color: #ede3f7;
-  color: #542683 !important;
+.sideBarUL li.item header {
+  & > *:hover {
+    background-color: #ede3f7;
+    color: #542683 !important;
+  }
   a {
     text-decoration: none;
   }
