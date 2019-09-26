@@ -77,7 +77,7 @@ const Header = ({ location }) => (
 
           {isOpen && (
             <div className="d-md-none">
-              <Sidebar />
+              <Sidebar onLinkClick={() => setIsOpen(false)} />
             </div>
           )}
           {/* <ul className={'nav navbar-nav navBarUL navBarNav navbar-right navBarULRight'}>

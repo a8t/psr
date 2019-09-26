@@ -13,7 +13,14 @@ const Header = styled.header`
   width: 100%;
 `;
 
-const Tree = ({ title, slug, parentSlug, childNodes, isFirstLevel }) => {
+const Tree = ({
+  onLinkClick,
+  title,
+  slug,
+  parentSlug,
+  childNodes,
+  isFirstLevel,
+}) => {
   const [collapsed, setCollapsed] = useState(false);
   const toggle = () => setCollapsed(!collapsed);
 
@@ -31,7 +38,9 @@ const Tree = ({ title, slug, parentSlug, childNodes, isFirstLevel }) => {
   return (
     <li className={calculatedClassName}>
       <Header>
-        <Link to={parentSlug + slug}>{title}</Link>
+        <Link to={parentSlug + slug} onClick={onLinkClick}>
+          {title}
+        </Link>
         {!config.sidebar.frontLine && title && hasChildren && (
           <button onClick={toggle} className="collapser">
             {!collapsed ? <OpenedSvg /> : <ClosedSvg />}
@@ -43,6 +52,7 @@ const Tree = ({ title, slug, parentSlug, childNodes, isFirstLevel }) => {
         <ul>
           {childNodes.map(({ title, slug, parentSlug, childNodes }) => (
             <Tree
+              onLinkClick={onLinkClick}
               key={title}
               title={title}
               slug={slug}
