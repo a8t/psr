@@ -133,24 +133,26 @@ pre {
 
 .sideBarUL {
   margin-top: 32px;
-}
+  display: flex;
+  width: 300px;
+  overflow: hidden;
 
-.sideBarUL li {
-  list-style-type: none;
-  width: auto;
-}
-
-.sideBarUL li a {
-  color: #333;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5;
-  padding: 7px 24px 7px 16px;
-  padding-left: 10px;
-  padding-right: 25px;
-  border-style: solid none solid solid;
-  border-width: 1px 0px 1px 1px;
-  border-color: transparent currentcolor transparent transparent;
+  li {
+    list-style-type: none;
+    width: 100%;
+    a {
+      width: 100%;
+      color: #333;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+      padding: 7px 0px 7px 0px;
+      padding-left: 10px;
+      border-style: solid none solid solid;
+      border-width: 1px 0px 1px 1px;
+      border-color: transparent currentcolor transparent transparent;
+    }
+  }
 }
 
 .rightSideTitle {
@@ -159,7 +161,7 @@ pre {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  padding: 7px 24px 7px 16px;
+  padding: 7px 0px 7px 0px;
   border-left: 1px solid #e6ecf1;
   border-left-color: rgb(230, 236, 241);
   color: #9daab6;
@@ -167,71 +169,72 @@ pre {
 
 .rightSideBarUL {
   margin-top: 32px;
-}
-
-.rightSideBarUL li {
-  list-style-type: none;
-  border-left: 1px solid #e6ecf1;
-  border-left-color: rgb(230, 236, 241);
-}
-
-.rightSideBarUL li a {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.5;
-  padding: 7px 24px 7px 16px;
-}
-
-.hideFrontLine .collapser {
-  background: transparent;
-  border: none;
-  outline: none;
-  position: relative;
-  top: -3px;
-  padding: 8px;
-  path {
-    stroke: #333;
-    fill: #333;
+  li {
+    list-style-type: none;
+    border-left: 1px solid #e6ecf1;
+    border-left-color: rgb(230, 236, 241);
+    a {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.5;
+      padding: 7px 0px 7px 0px;
+    }
   }
 }
 
-.hideFrontLine .active > a {
-  background-color: #542683;
-  color: #fff !important;
-  margin-right: 16px;
-}
-.firstLevel ul li .collapser svg path {
-  // fill: #fff !important;
-}
-.active .collapser > svg > path {
-  fill: #663399 !important;
+.hideFrontLine {
+  .collapser {
+    background: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    top: -3px;
+    padding: 8px;
+    path {
+      stroke: #333;
+      fill: #333;
+    }
+  }
+
+  .active > a {
+    background-color: #542683;
+    color: #fff !important;
+    margin-right: 16px;
+  }
 }
 
-.firstLevel ul .item ul .item {
+.collapser {
+  margin-left: 2px;
+  &:hover svg > path {
+    fill: #663399 !important;
+  }
+}
+
+.firstLevel .item {
   border-left: 1px solid #e6ecf1;
 }
 
 .sideBarUL .item {
   list-style: none;
   padding: 0;
-  width: 300px;
 }
+
 .sideBarUL .item > a {
   color: #333;
   text-decoration: none;
   display: inline-block;
   position: relative;
   width: 100%;
-  padding-right: 35px;
-  padding-left: 15px;
 }
-.sideBarUL .item > a:hover {
+
+.sideBarUL li.item header:hover {
   background-color: #ede3f7;
-  color: #333 !important;
+  color: #542683 !important;
+  a {
+    text-decoration: none;
+  }
 }
-.showFrontLine .item > a:hover {
-  background-color: #542683;
-}
+
 .showFrontLine .active > a {
   color: #fff;
   background-color: #473485;
@@ -241,8 +244,8 @@ pre {
   margin-left: 16px;
 }
 
-.firstLevel > ul > .item {
-  margin-left: 0 !important;
+.firstLevel > li > ul.item {
+  border-left: 0 !important;
 }
 
 .showFrontLine .item .item {

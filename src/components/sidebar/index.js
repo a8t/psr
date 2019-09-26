@@ -1,10 +1,10 @@
 import React from 'react';
 import Tree from './tree';
-import { StaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'react-emotion';
-import config from '../../../config';
+import { treeify, filterIndexIfRequired, sortTreeData } from './utils';
 
-const Sidebar = styled('aside')`
+const Sidebar = styled('nav')`
   width: 100%;
   /* background-color: rgb(245, 247, 249); */
   /* border-right: 1px solid #ede7f3; */
@@ -59,32 +59,43 @@ const Divider = styled(props => (
   }
 `;
 
-const SidebarLayout = ({ location }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allMdx {
-          edges {
-            node {
-              fields {
-                slug
-                title
-              }
-            }
+const query = graphql`
+  query {
+    allMdx {
+      edges {
+        node {
+          fields {
+            slug
+            title
           }
         }
       }
-    `}
-    render={({ allMdx }) => {
-      return (
-        <Sidebar>
-          <ul className={'sideBarUL'}>
-            <Tree edges={allMdx.edges} />
-          </ul>
-        </Sidebar>
-      );
-    }}
-  />
-);
+    }
+  }
+`;
 
+const SidebarLayout = ({ location }) => {
+  const { allMdx } = useStaticQuery(query);
+
+  const { title, urlPathSegment, childNodes } = sortTreeData(
+    treeify(filterIndexIfRequired(allMdx.edges))
+  );
+
+  return (
+    <Sidebar>
+      <ul className={'sideBarUL'}>
+        {childNodes.map(({ title, slug, childNodes }) => (
+          <Tree
+            key={title}
+            title={title}
+            slug={slug}
+            parentSlug=""
+            childNodes={childNodes}
+            isFirstLevel={true}
+          />
+        ))}
+      </ul>
+    </Sidebar>
+  );
+};
 export default SidebarLayout;
