@@ -36,7 +36,7 @@ const Tree = ({ title, slug, parentSlug, childNodes, isFirstLevel }) => {
             {!collapsed ? <OpenedSvg /> : <ClosedSvg />}
           </button>
         )}
-        <Link to={parentSlug + slug}>{title}</Link>
+        <Link to={'/' + parentSlug + slug}>{title}</Link>
       </Header>
 
       {!collapsed && hasChildren && (

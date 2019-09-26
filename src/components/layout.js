@@ -37,28 +37,27 @@ const MaxWidth = styled('div')`
 `;
 const LeftSideBarWidth = styled('div')`
   width: 298px;
+  margin-right: 16px;
 `;
 const RightSideBarWidth = styled('div')`
   width: 224px;
 `;
 const Layout = ({ children, location }) => (
-  <>
+  <MDXProvider components={mdxComponents}>
     <Header location={location} />
 
-    <MDXProvider components={mdxComponents}>
-      <Wrapper>
-        <LeftSideBarWidth className={'d-none d-md-block'}>
-          <Sidebar location={location} />
-        </LeftSideBarWidth>
-        <Content>
-          <MaxWidth>{children}</MaxWidth>
-        </Content>
-        <RightSideBarWidth className={'d-none d-md-block'}>
-          <RightSidebar location={location} />
-        </RightSideBarWidth>
-      </Wrapper>
-    </MDXProvider>
-  </>
+    <Wrapper>
+      <LeftSideBarWidth className={'d-none d-md-block'}>
+        <Sidebar location={location} />
+      </LeftSideBarWidth>
+      <Content>
+        <MaxWidth>{children}</MaxWidth>
+      </Content>
+      <RightSideBarWidth className={'d-none d-md-block'}>
+        <RightSidebar location={location} />
+      </RightSideBarWidth>
+    </Wrapper>
+  </MDXProvider>
 );
 
 export default Layout;

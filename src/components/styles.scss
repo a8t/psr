@@ -134,7 +134,7 @@ pre {
 .sideBarUL {
   margin-top: 32px;
   display: flex;
-  width: 300px;
+  min-width: 300px;
   overflow: hidden;
 
   li {

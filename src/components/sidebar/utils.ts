@@ -140,8 +140,6 @@ export function sortTreeData(tree: UrlTreeNode): UrlTreeNode {
     .slice()
     .sort(({ slug: slugA }, { slug: slugB }) => slugA.localeCompare(slugB));
 
-  console.log(sortedChildNodes);
-
   return {
     ...tree,
     childNodes: sortedChildNodes.map(({ childNodes, ...rest }) => {
@@ -156,14 +154,3 @@ export function sortTreeData(tree: UrlTreeNode): UrlTreeNode {
     }),
   };
 }
-
-// const sortTree = (tree: UrlTreeNode): UrlTreeNode => {
-//   const {
-//     sidebar: { forcedNavOrder = [] },
-//   } = config;
-//   const tmp = [...forcedNavOrder].reverse();
-
-//   // first, sort the top level according to the sidebar config
-
-//   const treeWithTopLevelSorted = _.sortBy(tree.childNodes);
-// };
