@@ -69,7 +69,7 @@ function isolateItemAtIndex<T>(
   return {
     head: inputArray.slice(0, index),
     itemAtIndex: inputArray[index],
-    tail: inputArray.slice(index + 1, -1),
+    tail: inputArray.slice(index + 1, inputArray.length),
   };
 }
 
@@ -85,8 +85,8 @@ export function treeify(edges: Array<MdxEdge>): UrlTreeNode {
     const [slugHead, ...slugTail] = slug.split('/').slice(1);
 
     // find if the accumulated data has an entry for the head of the current slug
-    const indexOfHead = accumulated.findIndex(({ slug }) => {
-      return slug.includes(slugHead);
+    const indexOfHead = accumulated.findIndex(({ slug: existingSlug }) => {
+      return existingSlug.includes(slugHead);
     });
 
     if (indexOfHead > -1) {
@@ -102,7 +102,11 @@ export function treeify(edges: Array<MdxEdge>): UrlTreeNode {
           ...itemToAddChildrenTo,
           childNodes: recursivelyRearrangeSluggedDataIntoTrees(
             itemToAddChildrenTo.childNodes,
-            { slug: `/${slugTail.join('/')}`, title, parentSlug: slugHead }
+            {
+              slug: `/${slugTail.join('/')}`,
+              title,
+              parentSlug: '/' + slugHead,
+            }
           ),
         },
         ...tail,

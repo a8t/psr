@@ -4,6 +4,8 @@ metaTitle: 'PSR | Philippine history'
 metaDescription: 'An overview of Philippine history from pre-colonial, through Spanish and US colonialism, and now into modern US neo-colonialism.'
 ---
 
+# The Philippines
+
 The Philippines is an archipelago with a tropical climate and a mountainous terrain. It is located a little above the equator and bounded by the Pacific Ocean, the China Sea and the Celebes Sea. It lies some 600 miles southeast of the coast of mainland Asia and is strung on the north-south axis, bounded by China to the north and Indonesia and North Kalimantan to the south.
 
 The geographic position of the Philippines makes the Filipino people literally close to the center of the world proletarian revolution and part of a gigantic wave of a powerful revolutionary movements in Southeast Asia. Though the Philippines seems surrounded by a moat and is at the outer rim of Asia directly facing U.S. imperialism, the Number One enemy of the world’s peoples, the Filipino people can rely on a great invincible political rear made up of the People’s Republic of China and all revolutionary peoples of Asia.
@@ -13,6 +15,8 @@ The Philippines consists of 7,100 islands and islets with a total land area of 1
 The mountains, many of which are volcanic in origin, the extensive river systems and the tropical climate endow the Philippines with extremely fertile agricultural lands suitable for a wide variety of crops for food and industrial use. It has vast forest, mineral, marine and power resources. Its forests cover a little over one-third of the land. Its mineral resources include iron, gold, copper, nickel, oil, coal, chrome, and so many others. Its principal rivers can be controlled to irrigate fields continuously and also to provide electricity to every part of the country. It has rich inland and sea fishing grounds. Numerous fine harbors and landlocked straits are available for building up the maritime industry.
 
 If the natural wealth of the Philippines were to be tapped and developed by the Filipino people themselves for their own benefit, it would be more than enough to sustain a population that is several times bigger than the present one. However, U.S. imperialism, domestic feudalism and bureaucrat capitalism prevent the Filipino people from making use of their natural resources to their own advantage. As of now, U.S. imperialism and all of its lackeys exploit these natural resources for their own selfish profit and according to their narrow schemes at the expense of the toiling masses.
+
+# The people of the Philippines
 
 Based on the 1970 Census, the Filipino now number about 37 million and they are increasing at the annual rate of 3.5 per cent. Seventy-five per cent of them live in the countryside under backward and feudal conditions. If the population were not subjected to foreign and feudal exploitation, not only could it become self-reliant economically but it could also excel in all fields of social endeavor. It could be a massive force for progress instead of being a “problem” interpreted in the Malthusian way by reactionaries who constantly prate about “overpopulation” to cover up the basic problems that are U.S. imperialism, feudalism and bureaucrat capitalism.
 

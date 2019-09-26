@@ -31,12 +31,12 @@ const Tree = ({ title, slug, parentSlug, childNodes, isFirstLevel }) => {
   return (
     <li className={calculatedClassName}>
       <Header>
+        <Link to={parentSlug + slug}>{title}</Link>
         {!config.sidebar.frontLine && title && hasChildren && (
           <button onClick={toggle} className="collapser">
             {!collapsed ? <OpenedSvg /> : <ClosedSvg />}
           </button>
         )}
-        <Link to={'/' + parentSlug + slug}>{title}</Link>
       </Header>
 
       {!collapsed && hasChildren && (
