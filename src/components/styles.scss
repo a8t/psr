@@ -173,34 +173,6 @@ pre {
   }
 }
 
-.rightSideTitle {
-  font-size: 10px;
-  line-height: 1;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  padding: 7px 0px 7px 0px;
-  border-left: 1px solid #e6ecf1;
-  border-left-color: rgb(230, 236, 241);
-  color: #9daab6;
-}
-
-.rightSideBarUL {
-  margin-top: 32px;
-  padding-left: 8px;
-  border-left: 1px solid #e6ecf1;
-  border-left-color: rgb(230, 236, 241);
-  li {
-    list-style-type: none;
-    a {
-      font-size: 12px;
-      font-weight: 500;
-      line-height: 1.5;
-      padding: 7px 16px 7px 0px;
-    }
-  }
-}
-
 .hideFrontLine {
   .collapser {
     background: transparent;
