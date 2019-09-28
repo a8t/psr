@@ -159,7 +159,7 @@ pre {
       font-size: 14px;
       font-weight: 500;
       line-height: 1.5;
-      padding: 7px 0px 7px 0px;
+      padding: 7px 0px;
       padding-left: 10px;
       border-style: solid none solid solid;
       border-width: 1px 0px 1px 1px;
@@ -167,11 +167,7 @@ pre {
 
       &.active {
         background-color: #e0cff1;
-        color: #542683 !important;
-        margin-right: 16px;
-        // &:hover {
-        //   background-color: #cbbdd9 !important;
-        // }
+        color: #542683;
       }
     }
   }
