@@ -11,7 +11,7 @@ export default {
       id={props.children.replace(/\s+/g, '').toLowerCase()}
       {...props}
       is="h1"
-      fontSize={[5, 6]}
+      fontSize={[5]}
     />
   ),
   h2: props => (
