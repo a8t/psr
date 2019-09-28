@@ -24,6 +24,7 @@ const plugins = [
         {
           resolve: 'gatsby-remark-copy-linked-files',
         },
+        { resolve: `gatsby-remark-autolink-headers`, options: { icon: false } },
       ],
       extensions: ['.mdx', '.md'],
     },
