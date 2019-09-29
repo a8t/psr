@@ -1,18 +1,13 @@
-import system from "system-components/emotion";
+import styled from 'styled-components';
 
-const Heading = system(
-  {
-    is: "h2",
-    fontSize: 5,
-    fontWeight: "700",
-    lineHeight: 1.5,
-    mt: 4,
-    mb: 3
-  },
-  "fontFamily",
-  "color",
-  "textAlign"
-);
-Heading.displayName = "Heading";
+const defaultFontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72];
+
+const Heading = styled.h1`
+  font-size: ${({ fontSize }) => defaultFontSizes[fontSize]}px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 32px;
+  margin-bottom: 24px;
+`;
 
 export default Heading;

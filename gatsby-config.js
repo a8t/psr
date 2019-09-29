@@ -29,7 +29,6 @@ const plugins = [
       extensions: ['.mdx', '.md'],
     },
   },
-  'gatsby-plugin-emotion',
   'gatsby-plugin-remove-trailing-slashes',
   'gatsby-plugin-react-helmet',
   {

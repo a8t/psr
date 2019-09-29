@@ -1,10 +1,10 @@
 import React from 'react';
 import Tree from './tree';
 import { useStaticQuery, graphql } from 'gatsby';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { treeify, filterIndexIfRequired, sortTreeData } from './utils';
 
-const Sidebar = styled('nav')`
+const Sidebar = styled.nav`
   width: 100%;
   overflow: auto;
   position: fixed;

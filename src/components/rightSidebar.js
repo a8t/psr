@@ -1,8 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 
-const RightSideBarWrapper = styled('aside')`
+const RightSideBarWrapper = styled.aside`
   width: calc(100% - 32px);
   border-right: 1px solid #ede7f3;
   overflow: auto;

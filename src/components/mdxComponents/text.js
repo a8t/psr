@@ -1,17 +1,9 @@
-import system from "system-components/emotion";
+import styled from 'styled-components';
 
-const Text = system(
-  {
-    m: 0
-  },
-  "space",
-  "color",
-  "fontFamily",
-  "fontSize",
-  "fontWeight",
-  "textAlign",
-  "lineHeight"
-);
-Text.displayName = "Text";
+const Text = styled.p`
+  margin-bottom: 32px;
+  margin-top: 16px;
+  line-height: 1.625;
+`;
 
 export default Text;

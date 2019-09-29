@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { MDXProvider } from '@mdx-js/react';
 import mdxComponents from './mdxComponents';
 import Sidebar from './sidebar';
@@ -7,7 +7,7 @@ import RightSidebar from './rightSidebar';
 import Header from './Header';
 import './styles.scss';
 
-const Wrapper = styled('div')`
+const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
 
@@ -16,7 +16,7 @@ const Wrapper = styled('div')`
   }
 `;
 
-const Content = styled('main')`
+const Content = styled.main`
   display: flex;
   flex-grow: 1;
   margin: 0px 88px;
@@ -29,17 +29,17 @@ const Content = styled('main')`
   }
 `;
 
-const MaxWidth = styled('div')`
+const MaxWidth = styled.div`
   @media only screen and (max-width: 50rem) {
     width: 100%;
     position: relative;
   }
 `;
-const LeftSideBarWidth = styled('div')`
+const LeftSideBarWidth = styled.div`
   width: 300px;
   margin-right: 16px;
 `;
-const RightSideBarWidth = styled('div')`
+const RightSideBarWidth = styled.div`
   width: 224px;
 `;
 const Layout = ({ children, location }) => (
