@@ -117,10 +117,6 @@ blockquote {
 .navBarUL li a:hover {
   opacity: 0.7;
 }
-pre {
-  border: 0 !important;
-  background-color: rgb(245, 247, 249); /* !important; */
-}
 
 .mainWrapper ul {
   -webkit-padding-start: 40px;
@@ -161,9 +157,6 @@ pre {
       line-height: 1.5;
       padding: 7px 0px;
       padding-left: 10px;
-      border-style: solid none solid solid;
-      border-width: 1px 0px 1px 1px;
-      border-color: transparent currentcolor transparent transparent;
 
       &.active {
         background-color: #e0cff1;
@@ -199,7 +192,7 @@ pre {
 }
 
 .firstLevel .item {
-  border-left: 1px solid #d9c6ec;
+  border-left: 1px solid #ddd;
 }
 
 .sideBarUL .item {
@@ -229,8 +222,7 @@ pre {
 }
 
 .showFrontLine .item .item {
-  border-left: 1px solid #e6ecf1;
-  border-left-color: rgb(230, 236, 241);
+  border-left: 1px solid #eee;
   padding: 0;
   width: calc(100% - 16px) !important;
 }
@@ -251,16 +243,7 @@ pre {
   margin-bottom: 32px;
 }
 
-.title {
-  font-size: 32px;
-  line-height: 1.5;
-  font-weight: 500;
-  border-left: 2px solid rgb(116, 76, 188);
-  padding: 0 16px;
-  flex: 1;
-  margin-top: 0;
-  padding-top: 0;
-}
+// nextPrevious starts here
 
 .addPaddTopBottom {
   padding: 50px 0;
