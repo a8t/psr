@@ -5,8 +5,14 @@ import styled from 'styled-components';
 import { treeify, filterIndexIfRequired, sortTreeData } from './utils';
 
 const Sidebar = styled.nav`
-  width: 100%;
-  overflow: auto;
+  width: 300px;
+  margin-right: 16px;
+
+  @media only screen and(max-width: 1023px) {
+    width: 200px;
+  }
+
+  /* overflow: auto; */
   position: fixed;
   padding-left: 0px;
   position: -webkit-sticky;
@@ -15,28 +21,18 @@ const Sidebar = styled.nav`
   top: 0;
   padding-right: 0;
   background-color: #372476;
-  /* Safari 4-5, Chrome 1-9 */
-  background: linear-gradient(#372476, #3b173b);
   color: #333;
-  background: -webkit-gradient(
-    linear,
-    0% 0%,
-    0% 100%,
-    from(#372476),
-    to(#3b173b)
-  );
-  /* Safari 5.1, Chrome 10+ */
   background: white;
-  @media only screen and (max-width: 767px) {
-    padding-left: 0px;
-  }
-  @media (min-width: 767px) and (max-width: 1023px) {
-    padding-left: 0;
-  }
+
   @media only screen and (max-width: 1023px) {
     width: 100%;
-    /* position: relative; */
     height: 100vh;
+  }
+
+  > ul {
+    margin-top: 32px;
+    min-width: 300px;
+    overflow: hidden;
   }
 `;
 
@@ -71,24 +67,23 @@ const query = graphql`
   }
 `;
 
-const SidebarLayout = ({ location, onLinkClick }) => {
+const SidebarLayout = ({ className, location, onLinkClick }) => {
   const { allMdx } = useStaticQuery(query);
 
   const { title, urlPathSegment, childNodes } = sortTreeData(
     treeify(filterIndexIfRequired(allMdx.edges))
   );
   return (
-    <Sidebar>
-      <ul className={'sideBarUL'}>
+    <Sidebar className={className}>
+      <ul>
         {childNodes.map(({ title, slug, childNodes }) => (
           <Tree
-            onLinkClick={onLinkClick}
             key={title}
+            onLinkClick={onLinkClick}
             title={title}
             slug={slug}
             parentSlug=""
             childNodes={childNodes}
-            isFirstLevel={true}
             location={location}
           />
         ))}

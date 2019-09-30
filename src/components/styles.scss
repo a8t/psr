@@ -1,4 +1,4 @@
-@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
 * {
   margin: 0;
@@ -133,107 +133,6 @@ blockquote {
 }
 
 /* Header section ends here */
-
-.sideBarUL {
-  margin-top: 32px;
-  min-width: 300px;
-  overflow: hidden;
-
-  li {
-    list-style-type: none;
-    width: 100%;
-
-    header > *:hover {
-      background-color: #ede3f7;
-      color: #542683 !important;
-    }
-
-    a {
-      text-decoration: none;
-      width: 100%;
-      color: #333;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1.5;
-      padding: 7px 0px;
-      padding-left: 10px;
-
-      &.active {
-        background-color: #e0cff1;
-        color: #542683;
-      }
-    }
-  }
-}
-
-.hideFrontLine {
-  .collapser {
-    background: transparent;
-    border: none;
-    outline: none;
-    position: relative;
-    top: -3px;
-    padding: 8px;
-  }
-}
-
-.collapser {
-  margin-left: 2px;
-
-  svg > path {
-    stroke: #d9c6ec;
-    fill: #ddd !important;
-    stroke-linecap: round;
-  }
-
-  &:hover svg > path {
-    fill: #663399 !important;
-  }
-}
-
-.firstLevel .item {
-  border-left: 1px solid #ddd;
-}
-
-.sideBarUL .item {
-  list-style: none;
-  padding: 0;
-}
-
-.sideBarUL .item > a {
-  color: #333;
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
-  width: 100%;
-}
-
-.showFrontLine .active > a {
-  color: #fff;
-  background-color: #473485;
-}
-
-.sideBarUL .item .item {
-  margin-left: 16px;
-}
-
-.firstLevel > li > ul.item {
-  border-left: 0 !important;
-}
-
-.showFrontLine .item .item {
-  border-left: 1px solid #eee;
-  padding: 0;
-  width: calc(100% - 16px) !important;
-}
-
-.showFrontLine .item .active > a {
-  border-color: rgb(230, 236, 241) !important;
-  border-style: solid none solid solid;
-  border-width: 1px 0px 1px 1px;
-  background-color: #542683;
-  color: #fff;
-}
 
 .titleWrapper {
   display: flex;

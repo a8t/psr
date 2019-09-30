@@ -18,9 +18,11 @@ const Wrapper = styled.div`
 
 const Content = styled.main`
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
   margin: 0px 88px;
   margin-top: 3rem;
+  width: 100%;
 
   @media only screen and (max-width: 1023px) {
     padding-left: 0;
@@ -29,16 +31,6 @@ const Content = styled.main`
   }
 `;
 
-const MaxWidth = styled.div`
-  @media only screen and (max-width: 50rem) {
-    width: 100%;
-    position: relative;
-  }
-`;
-const LeftSideBarWidth = styled.div`
-  width: 300px;
-  margin-right: 16px;
-`;
 const RightSideBarWidth = styled.div`
   width: 224px;
 `;
@@ -47,12 +39,8 @@ const Layout = ({ children, location }) => (
     <Header location={location} />
 
     <Wrapper>
-      <LeftSideBarWidth className={'d-none d-md-block'}>
-        <Sidebar location={location} />
-      </LeftSideBarWidth>
-      <Content>
-        <MaxWidth>{children}</MaxWidth>
-      </Content>
+      <Sidebar className="d-none d-md-block" location={location} />
+      <Content>{children}</Content>
       <RightSideBarWidth className={'d-none d-md-block'}>
         <RightSidebar location={location} />
       </RightSideBarWidth>

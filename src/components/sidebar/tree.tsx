@@ -3,14 +3,64 @@ import { Link } from 'gatsby';
 import _ from 'lodash';
 import styled from 'styled-components';
 
-import config from '../../../config';
 import OpenedSvg from '../images/opened';
 import ClosedSvg from '../images/closed';
 
-const Header = styled.header`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+const TreeItem = styled.li`
+  list-style: none;
+  padding: 0;
+
+  > header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    > a {
+      color: #333;
+      text-decoration: none !important;
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+      padding: 7px 10px 7px 7px;
+
+      &.active {
+        background-color: #e0cff1;
+        color: #542683;
+      }
+    }
+
+    > .collapser {
+      background: transparent;
+      border: none;
+      outline: none;
+      position: relative;
+      top: -3px;
+      padding: 8px;
+      margin-left: 2px;
+
+      svg > path {
+        stroke: #d9c6ec;
+        fill: #ddd;
+        stroke-linecap: round;
+      }
+    }
+
+    & *:hover {
+      background-color: #ede3f7;
+      color: #542683;
+      & svg > path {
+        fill: #663399;
+      }
+    }
+  }
+
+  :not(.isLeaf) & {
+    margin-left: 16px;
+    border-left: 1px solid #ddd;
+  }
 `;
 
 const Tree = ({
@@ -19,7 +69,6 @@ const Tree = ({
   slug,
   parentSlug,
   childNodes,
-  isFirstLevel,
   location,
 }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -27,47 +76,41 @@ const Tree = ({
 
   const url = parentSlug + slug;
 
-  const active =
-    location &&
-    (location.pathname === url ||
-      location.pathname === config.gatsby.pathPrefix + url);
+  const active = location && location.pathname === url;
 
-  const hasChildren = childNodes.length !== 0;
+  const isLeaf = childNodes.length === 0;
 
-  const calculatedClassName = `${
-    config.sidebar.frontLine ? 'showFrontLine' : 'hideFrontLine'
-  } ${isFirstLevel ? 'firstLevel' : ''} item `;
+  const calculatedClassName = `${isLeaf ? 'isLeaf' : ''}`;
 
   return (
-    <li className={calculatedClassName}>
-      <Header>
+    <TreeItem className={calculatedClassName}>
+      <header>
         <Link to={url} onClick={onLinkClick} className={active ? 'active' : ''}>
           {title}
         </Link>
-        {!config.sidebar.frontLine && title && hasChildren && (
+        {title && !isLeaf && (
           <button onClick={toggle} className="collapser">
             {!collapsed ? <OpenedSvg /> : <ClosedSvg />}
           </button>
         )}
-      </Header>
+      </header>
 
-      {!collapsed && hasChildren && (
+      {!collapsed && !isLeaf && (
         <ul>
           {childNodes.map(({ title, slug, parentSlug, childNodes }) => (
             <Tree
-              onLinkClick={onLinkClick}
               key={title}
+              onLinkClick={onLinkClick}
               title={title}
               slug={slug}
               childNodes={childNodes}
               parentSlug={parentSlug}
-              isFirstLevel={false}
               location={location}
             />
           ))}
         </ul>
       )}
-    </li>
+    </TreeItem>
   );
 };
 
