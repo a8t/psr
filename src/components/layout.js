@@ -20,20 +20,20 @@ const Content = styled.main`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin: 0px 88px;
-  margin-top: 3rem;
+  padding: 0px 48px;
+  padding-top: 3rem;
+  max-width: 45em;
   width: 100%;
+  min-width: 30em;
+  margin-right: auto;
 
   @media only screen and (max-width: 1023px) {
     padding-left: 0;
-    margin: 0 10px;
-    margin-top: 3rem;
+    padding: 0 16px;
+    padding-top: 3rem;
   }
 `;
 
-const RightSideBarWidth = styled.div`
-  width: 224px;
-`;
 const Layout = ({ children, location }) => (
   <MDXProvider components={mdxComponents}>
     <Header location={location} />
@@ -41,9 +41,7 @@ const Layout = ({ children, location }) => (
     <Wrapper>
       <Sidebar className="d-none d-md-block" location={location} />
       <Content>{children}</Content>
-      <RightSideBarWidth className={'d-none d-md-block'}>
-        <RightSidebar location={location} />
-      </RightSideBarWidth>
+      <RightSidebar className={'d-none d-lg-block'} location={location} />
     </Wrapper>
   </MDXProvider>
 );

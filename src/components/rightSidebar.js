@@ -3,8 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 const RightSideBarWrapper = styled.aside`
-  width: calc(100% - 32px);
-  border-right: 1px solid #ede7f3;
   overflow: auto;
   position: fixed;
   position: -webkit-sticky;
@@ -13,14 +11,17 @@ const RightSideBarWrapper = styled.aside`
   top: 32px;
 
   margin-top: 32px;
-  margin-left: 32px;
   padding-left: 8px;
-  border-left: 1px solid #e6ecf1;
-  border-left-color: rgb(230, 236, 241);
+  padding-right: 8px;
+  border-left: 2px solid;
+  border-left-color: rgba(230, 236, 241, 0.7);
+  height: 100%;
 
-  @media only screen and (max-width: 50rem) {
-    width: 100%;
-    position: relative;
+  min-width: 160px;
+  max-width: 224px;
+
+  @media only screen and (min-width: 1023px) {
+    max-width: 424px;
   }
 
   header {
@@ -43,7 +44,8 @@ const RightSideBarWrapper = styled.aside`
         line-height: 1.5;
         padding: 7px 16px 7px 0px;
 
-        width: 150px;
+        width: 100%;
+
         color: #5c6975;
         text-decoration: none;
         display: block;
@@ -72,7 +74,7 @@ const query = graphql`
   }
 `;
 
-const SidebarLayout = ({ location }) => {
+const SidebarLayout = ({ location, className }) => {
   const { allMdx } = useStaticQuery(query);
 
   const navItems = allMdx.edges
@@ -92,7 +94,7 @@ const SidebarLayout = ({ location }) => {
 
   return (
     navItems.length > 0 && (
-      <RightSideBarWrapper>
+      <RightSideBarWrapper className={className}>
         <header>CONTENTS</header>
         <ul>{navItems}</ul>
       </RightSideBarWrapper>

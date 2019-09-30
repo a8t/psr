@@ -5,11 +5,11 @@ import styled from 'styled-components';
 import { treeify, filterIndexIfRequired, sortTreeData } from './utils';
 
 const Sidebar = styled.nav`
-  width: 300px;
+  width: 100%;
   margin-right: 16px;
-
-  @media only screen and(max-width: 1023px) {
-    width: 200px;
+  height: 100vh;
+  @media only screen and (min-width: 768px) {
+    max-width: 300px;
   }
 
   /* overflow: auto; */
@@ -24,14 +24,9 @@ const Sidebar = styled.nav`
   color: #333;
   background: white;
 
-  @media only screen and (max-width: 1023px) {
-    width: 100%;
-    height: 100vh;
-  }
-
   > ul {
     margin-top: 32px;
-    min-width: 300px;
+    min-width: 150px;
     overflow: hidden;
   }
 `;
