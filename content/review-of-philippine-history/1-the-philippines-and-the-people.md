@@ -10,23 +10,37 @@ metaDescription: 'An overview of Philippine history from pre-colonial, through S
 
 The Philippines is an archipelago with a tropical climate and a mountainous terrain. It is located a little above the equator and bounded by the Pacific Ocean, the China Sea and the Celebes Sea. It lies some 600 miles southeast of the coast of mainland Asia and is strung on the north-south axis, bounded by China to the north and Indonesia and North Kalimantan to the south.
 
-The geographic position of the Philippines makes the Filipino people literally close to the center of the world proletarian revolution and part of a gigantic wave of a powerful revolutionary movements in Southeast Asia. Though the Philippines seems surrounded by a moat and is at the outer rim of Asia directly facing U.S. imperialism, the Number One enemy of the world’s peoples, the Filipino people can rely on a great invincible political rear made up of the People’s Republic of China and all revolutionary peoples of Asia.
+The geographic position of the Philippines makes the Filipino people literally close to the center of the world proletarian revolution and part of a gigantic wave of a powerful revolutionary movements in Southeast Asia.
+
+Though the Philippines seems surrounded by a moat and is at the outer rim of Asia directly facing U.S. imperialism, the Number One enemy of the world’s peoples, the Filipino people can rely on a great invincible political rear made up of the People’s Republic of China and all revolutionary peoples of Asia.
 
 ## The Islands
 
-The Philippines consists of 7,100 islands and islets with a total land area of 115,000 square miles. The two largest islands which are at the same time principal regions are Luzon and Mindanao. The former has a total land area of 54,000 square miles and the latter has 37,000 square miles. The third principal region is the group of islands and islets called the Visayas in the central part of the archipelago. The irregular coastline of the whole country extends to a little less than 11,000 miles. All the islands are seasonally inundated by river systems flowing from mountains. The plains and valleys are well-populated.
+The Philippines consists of 7,100 islands and islets with a total land area of 115,000 square miles.
+
+The two largest islands which are at the same time principal regions are Luzon and Mindanao. The former has a total land area of 54,000 square miles and the latter has 37,000 square miles. The third principal region is the group of islands and islets called the Visayas in the central part of the archipelago.
+
+The irregular coastline of the whole country extends to a little less than 11,000 miles. All the islands are seasonally inundated by river systems flowing from mountains. The plains and valleys are well-populated.
 
 ## The Richness of Resources
 
-The mountains, many of which are volcanic in origin, the extensive river systems and the tropical climate endow the Philippines with extremely fertile agricultural lands suitable for a wide variety of crops for food and industrial use. It has vast forest, mineral, marine and power resources. Its forests cover a little over one-third of the land. Its mineral resources include iron, gold, copper, nickel, oil, coal, chrome, and so many others. Its principal rivers can be controlled to irrigate fields continuously and also to provide electricity to every part of the country. It has rich inland and sea fishing grounds. Numerous fine harbors and landlocked straits are available for building up the maritime industry.
+The mountains, many of which are volcanic in origin, the extensive river systems and the tropical climate endow the Philippines with extremely fertile agricultural lands suitable for a wide variety of crops for food and industrial use.
 
-If the natural wealth of the Philippines were to be tapped and developed by the Filipino people themselves for their own benefit, it would be more than enough to sustain a population that is several times bigger than the present one. However, U.S. imperialism, domestic feudalism and bureaucrat capitalism prevent the Filipino people from making use of their natural resources to their own advantage.
+The Philippines has vast forest, mineral, marine and power resources. Its forests cover a little over one-third of the land. Its mineral resources include iron, gold, copper, nickel, oil, coal, chrome, and so many others.
 
-As of now, U.S. imperialism and all of its lackeys exploit these natural resources for their own selfish profit and according to their narrow schemes at the expense of the toiling masses.
+The principal rivers of the Philippines can be controlled to irrigate fields continuously and also to provide electricity to every part of the country. It has rich inland and sea fishing grounds. Numerous fine harbors and landlocked straits are available for building up the maritime industry.
+
+# The Philippines Is Rich, But The People Are Poor
+
+If the natural wealth of the Philippines were to be tapped and developed by the Filipino people themselves for their own benefit, it would be more than enough to sustain a population that is several times bigger than the present one.
+
+However, U.S. imperialism, domestic feudalism and bureaucrat capitalism prevent the Filipino people from making use of their natural resources to their own advantage. As of now, U.S. imperialism and all of its lackeys exploit these natural resources for their own selfish profit and according to their narrow schemes at the expense of the toiling masses.
 
 # The People of the Philippines
 
-Based on the 1970 Census, the Filipino now number about 37 million and they are increasing at the annual rate of 3.5 per cent. Seventy-five per cent of them live in the countryside under backward and feudal conditions. If the population were not subjected to foreign and feudal exploitation, not only could it become self-reliant economically but it could also excel in all fields of social endeavor. It could be a massive force for progress instead of being a “problem” interpreted in the Malthusian way by reactionaries who constantly prate about “overpopulation” to cover up the basic problems that are U.S. imperialism, feudalism and bureaucrat capitalism.
+Based on the 1970 Census, the Filipino now number about 37 million and they are increasing at the annual rate of 3.5 per cent. Seventy-five per cent of them live in the countryside under backward and feudal conditions.
+
+If the population were not subjected to foreign and feudal exploitation, not only could it become self-reliant economically, but it could also excel in all fields of social endeavor. It could be a massive force for progress instead of being a “problem” interpreted in the Malthusian way by reactionaries who constantly prate about “overpopulation” to cover up the basic problems that are U.S. imperialism, feudalism and bureaucrat capitalism.
 
 ## The Origins of the Filipino People
 
@@ -36,7 +50,7 @@ There are many theories on the peopling of the archipelago in prehistoric times.
 
 The aboriginal inhabitants of the Philippines were the Aetas or Negritoes, small black people, who first came to the Philippines on land bridges about 25,000 to 30,000 years ago in the Pleistocene era.
 
-They were followed by the first Indonesian wave of immigrants who came bringing with them an early stone age culture from Southeast Asia about 5,000 to 6,000 years ago. The second Indonesian wave came about 1,500 B.C. from Indochina and south China bringing with them a late neolithic or bronze- copper culture.
+They were followed by the first Indonesian wave of immigrants who came bringing with them an early stone age culture from Southeast Asia about 5,000 to 6,000 years ago. The second Indonesian wave came about 1,500 B.C. from Indochina and south China bringing with them a late neolithic or bronze-copper culture.
 
 What would later compose the main racial stock of the Filipino people, the Malay, came in three major waves:
 

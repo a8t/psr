@@ -26,7 +26,7 @@ The intensification of feudal exploitation included the adoption of the hated ha
 
 # The Development of the Filipino Proletariat and Bourgeoisie
 
-## Infrastructure Needs of Feudalism
+## The Infrastructure Needs of Feudalism
 
 The improvement of transportation and communications aggravated by feudal exploitation of the people. Exercising their colonial powers, the Spaniards ordered the people in increasing numbers to build roads, bridges and ports and paid them extremely low nominal wages. Big gangs of men were taken to distant places to work. At the same time, the improvement of transportation and communications paved the way for wider contacts among the exploited and oppressed people despite the rulers’ subjective wish to use these only for their own profit. Also the introduction of the steamship and the railroad in connection with foreign and domestic trade contribute a great deal to the formation of the Filipino proletariat.
 
@@ -78,7 +78,7 @@ The Propaganda Movement failed and was condemned as “subversive” and “here
 
 Putting his trust in the enemy, Rizal was subsequently arrested and exiled to Dapitan in 1892. When the Philippine Revolution of 1896 broke out, he was held culpable for it by the colonial tyrants, and yet he betrayed it by calling on the people to lay down their arms a few days before his execution.
 
-# The Revolutionary National Liberation Movement of the Katipunan
+# The National Democratic Revolution of the Katipunan
 
 The clear revolutionary call for separation from Spain was made by the _Kataastaasang Kagalanggalang na Katipunan ng mga Anak ng Bayan_. It was secretly founded in the proletarian district of Tondo by its leader Andres Bonifacio immediately after Rizal’s arrest in 1892.
 
@@ -92,7 +92,7 @@ The Philippine Revolution of 1896 was a national-democratic revolution of the ol
 
 At any rate, the revolution asserted the sovereignty of the Filipino people, the protection and promotion of civil liberties, the confiscation of the friar estates, and the elimination of theocratic rule.
 
-# The Katipunan Revolution Betrayed by the Liberal Bourgeoisie
+# The Filipino People Betrayed by the Liberal Bourgeoisie
 
 ## Aguinaldo's Usurping
 

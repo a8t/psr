@@ -9,39 +9,47 @@ metaTitle: 'PSR | Spanish Colonialism And Feudalism'
 
 The absence of a political unity involving all or the majority of the people of the archipelago allowed the Spanish conquistadores to impose their will on the people step by step even with a few hundreds of colonial troops at the start.
 
-Magellan employed the standard tactic of divide-and-rule when in 1521 he sided with Humabon against Lapu-lapu. He started a pattern of inveigling certain barangays to adopt the Christian faith and then employing them against other barangays which resisted colonial domination. However, it was Legazpi who in 1565 and thereafter succeeded in hoodwinking a large number of barangay chieftains typified by Sikatuna in quelling recalcitrant barangays with the sword and in establishing under the cross the first colonial settlements in Visayas and subsequently in Luzon.
+Magellan employed the standard tactic of divide-and-rule when in 1521 he sided with Humabon against Lapu-lapu. He started a pattern of inveigling certain barangays to adopt the Christian faith and then employing them against other barangays which resisted colonial domination.
 
-## Feudalism Emerging
+However, it was Legazpi who in 1565 and thereafter succeeded in hoodwinking a large number of barangay chieftains typified by Sikatuna in quelling recalcitrant barangays with the sword and in establishing under the cross the first colonial settlements in Visayas and subsequently in Luzon.
 
-The kind of society that developed in more than three centuries of Spanish rule was colonial and feudal. It was a society basically ruled by the landlord class, which included the Spanish colonial officials. The Catholic religious orders and the local puppet chiefs. The masses of the people were kept to the status of serfs and even the freemen became dispossessed.
+## Feudalism Emerges
+
+The kind of society that developed in more than three centuries of Spanish rule was colonial and feudal. It was a society basically ruled by the landlord class, which included the Spanish colonial officials, the Catholic religious orders and the local puppet chiefs. The masses of the people were kept to the status of serfs and even the freemen became dispossessed.
 
 ### From Barangays to Encomiendas
 
-It was in 1570 that the Spanish colonialists started to integrate the barangays that they had subjugated into larger administrative and economic units called the encomiendas. Wide areas of land, the encomiendas were awarded as royal grants to the colonial officials and Catholic religious orders in exchange for their “meritorious services” in the conquest of the native people. The encomienda system of local administration would be phased out in the 17th century when the organization of regular provinces was already possible and after it had served to establish the large-scale private landownership of the colonialists.
+It was in 1570 that the Spanish colonialists started to integrate the barangays that they had subjugated into larger administrative and economic units called the encomiendas.
+
+Wide areas of land, the encomiendas were awarded as royal grants to the colonial officials and Catholic religious orders in exchange for their “meritorious services” in the conquest of the native people. The encomienda system of local administration would be phased out in the 17th century when the organization of regular provinces was already possible and after it had served to establish the large-scale private landownership of the colonialists.
 
 Under the guise of looking after the spiritual welfare of the people, the encomenderos collected tribute, enforced corvee labor and conscripted native soldiers. They arbitrarily extended the territorial scope of their royal grants, usurped ownership over the lands previously developed by the people and put more land to cultivation by employing corvee labor. It was convenient for the colonialists to convert into agricultural lands the clearing made from the forests as a result of the timber-cutting necessitated by various construction projects.
 
 Public building, private houses, churches, fortifications, roads, bridges and ships for the galleon trade and for military expeditions were built. These entailed the mass conscription of labor for quarrying, timber-cutting, hauling, lumbering, brickmaking and construction work in nearby or faraway places.
 
-## Government Under Spanish Colonialism
+# Government Under Spanish Colonialism
 
-### Central
+## Central Government in Manila
 
-The central government was set up in Manila to run the affairs of the colony. Its head was the Spanish governor-general who saw to it that the Filipino people were compelled to pay taxes, render free labor and produce an agricultural surplus sufficient to feed the parasitic colonial officials, friars and soldiery. On the one hand, the governor-general had the soldiery to enforce the colonial order. On the other, he had the collaboration of the friars to keep the people in spiritual and economic enslavement. He enriched himself fast within his short stay in office by being the chief shipper on the Manila-Acapulco trade galleons and by being the dispenser of shipping permits to merchants.
+The central government was set up in Manila to run the affairs of the colony. Its head was the Spanish governor-general who saw to it that the Filipino people were compelled to pay taxes, render free labor and produce an agricultural surplus sufficient to feed the parasitic colonial officials, friars and soldiery.
 
-The Manila-Acapulco trade in certain goods coming from China and other neighboring countries yielded high revenues for the central government and the business-minded religious orders from the late 16th century to the early 19th century. It eventually declined and was replaced by the more profitable export of sugar, hemp, copra, tobacco, indigo and others on various foreign ships after the first half of the 18th century and all throughout the 19th century. The large-scale cultivation of these export crops was imposed on the toiling masses to provide more profits for Spanish colonialism.
+On the one hand, the governor-general had the soldiery to enforce the colonial order. On the other, he had the collaboration of the friars to keep the people in spiritual and economic enslavement. He enriched himself fast within his short stay in office by being the chief shipper on the Manila-Acapulco trade galleons and by being the dispenser of shipping permits to merchants.
 
-### Provincial
+The Manila-Acapulco trade in certain goods coming from China and other neighboring countries yielded high revenues for the central government and the business-minded religious orders from the late 16th century to the early 19th century.
+
+It eventually declined and was replaced by the more profitable export of sugar, hemp, copra, tobacco, indigo and others on various foreign ships after the first half of the 18th century and all throughout the 19th century. The large-scale cultivation of these export crops was imposed on the toiling masses to provide more profits for Spanish colonialism.
+
+## Provincial Governments
 
 At the provincial level was the alcalde-mayor as the colonial chieftain. He exercised both executive and judicial powers, collected tributes from the town and enjoyed the privilege of monopolizing commerce in the province and engaged in usury. He manipulated government funds as well as drew loans from the obras pias, the friars’ chest for “charities,” to engage in nefarious commerce and usury.
 
-### Town
+## Town
 
 At the town level was the gobernadorcillo, the top puppet official formally elected by the principalia. The principalia was composed of the incumbent and past gobernadorcillos and the barrio chieftains called the cabezas de barangay. It essentially reflected the assimilation of the old barangay leadership into the Spanish colonial system. Membership in the principalia was qualified by property, literacy, heredity and, of course, puppetry to the foreign tyrants.
 
 The most important regular duties of the gobernadorcillo and the cabezas de barangay under him were the collection of tribute and the enforcement of corvee labor. Their property was answerable for any deficiency in their performance. However, the gobernadorcillo usually made the cabezas de barangay his scapegoat. To avoid bankruptcy and keep themselves in the good graces of their colonial masters, these puppet officials also made sure that the main burden of colonial oppression was borne by the peasant masses.
 
-## Church and State
+# Church and State
 
 In the classic fashion of feudalism, the union of church and state suffused the entire colonial structure. All colonial subjects fell under friar control from birth until death.
 

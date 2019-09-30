@@ -30,17 +30,17 @@ Throughout the archipelago, the scope of barangays could be enlarged either thro
 
 As evident from the forms of social organization already attained, the precolonial inhabitants of the Philippine archipelago had an internal basis for further social development. In either barangay or sultanate, there was a certain mode of production which was bound to develop further until it would wear out and be replaced with a new one. There were definite classes whose struggle was bound to bring about social development. As a matter of fact, the class struggle within the barangay was already getting extended into interbarangay wars. The barangay was akin to the Greek city-state in many respects and the sultanate to the feudal commonwealth of other countries.
 
-## Production
+# Production
 
-### Agriculture
+## Agriculture
 
 The people had developed extensive agricultural fields. In the plains or in the mountains, the people had developed irrigation systems. The Ifugao rice terraces were the product of the engineering genius of the people; a marvel of 12,000 miles if strung end-to-end. There were livestock-raising, fishing and brewing of beverages.
 
-### Mining and weaponry
+## Mining and weaponry
 
 Also there were mining, the manufacture of metal implements, weapons and ornaments, lumbering, shipbuilding and weaving. The handicrafts were developing fast. Gunpowder had also come into use in warfare. As far north as Manila, when the Spaniards came, there was already a Muslim community which had cannons in its weaponry.
 
-## Culture and Religion
+# Culture and Religion
 
 The ruling classes made use of arms to maintain the social system, to assert their independence from other barangays or to repel foreign invaders. Their jurisprudence would still be borne out today by the so-called Code of Kalantiyaw and the Muslim laws. These were touchstones of their culture.
 
@@ -48,7 +48,7 @@ There was a written literature which included epics, ballads, riddles and verse-
 
 In areas where anito worship and polytheism prevailed, the images of flora and fauna were imitated, and in the areas where the Muslim faith prevailed, geometric and arabesque designs were made. Morga’s Sucesos de las Islas Filipinas, a record of what the Spanish conquistadores came upon, would later be used by Dr. Jose Rizal as testimony to the achievement of the indios in precolonial times.
 
-## Commerce
+# Commerce
 
 There was interisland commerce ranging from Luzon to Mindanao and vice-versa. There were extensive trade relations with neighboring countries like China, Indochina, North Borneo, Indonesia, Malaya, Japan and Thailand.<!--citation--> Traders from as far as India and the Middle East vied for commerce with the precolonial inhabitants of the archipelago.
 
