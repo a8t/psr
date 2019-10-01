@@ -50,8 +50,12 @@ class NextPrevious extends React.Component {
     return (
       <div className={'nextPreviousWrapper'}>
         {previousInfo.url && currentIndex >= 0 ? (
-          <Link to={nav[currentIndex - 1].url} className={'previousBtn'}>
-            <div className={'leftArrow'}>
+          <Link
+            to={nav[currentIndex - 1].url}
+            className={'previousBtn'}
+            aria-label="Previous article"
+          >
+            <div className={'leftArrow'} aria-hidden>
               <svg
                 preserveAspectRatio="xMidYMid meet"
                 height="1em"
@@ -72,7 +76,7 @@ class NextPrevious extends React.Component {
               </svg>
             </div>
             <div className={'preRightWrapper'}>
-              <div className={'smallContent'}>
+              <div className={'smallContent'} aria-hidden>
                 <span>Previous</span>
               </div>
               <div className={'nextPreviousTitle'}>
@@ -82,9 +86,13 @@ class NextPrevious extends React.Component {
           </Link>
         ) : null}
         {nextInfo.url && currentIndex >= 0 ? (
-          <Link to={nav[currentIndex + 1].url} className={'nextBtn'}>
+          <Link
+            to={nav[currentIndex + 1].url}
+            className={'nextBtn'}
+            aria-label="Previous article"
+          >
             <div className={'nextRightWrapper'}>
-              <div className={'smallContent'}>
+              <div className={'smallContent'} aria-hidden>
                 <span>Next</span>
               </div>
               <div className={'nextPreviousTitle'}>
@@ -93,7 +101,7 @@ class NextPrevious extends React.Component {
                 </span>
               </div>
             </div>
-            <div className={'rightArrow'}>
+            <div className={'rightArrow'} aria-hidden>
               <svg
                 preserveAspectRatio="xMidYMid meet"
                 height="1em"

@@ -37,7 +37,6 @@ const TreeItem = styled.li`
       border: none;
       outline: none;
       position: relative;
-      top: -3px;
       padding: 8px;
       margin-left: 2px;
 
@@ -89,8 +88,12 @@ const Tree = ({
           {title}
         </Link>
         {title && !isLeaf && (
-          <button onClick={toggle} className="collapser">
-            {!collapsed ? <OpenedSvg /> : <ClosedSvg />}
+          <button
+            onClick={toggle}
+            className="collapser"
+            aria-label="toggle subtree"
+          >
+            {collapsed ? <ClosedSvg /> : <OpenedSvg />}
           </button>
         )}
       </header>

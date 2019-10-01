@@ -6,8 +6,12 @@ const OpenedSvg = () => (
     width="12"
     height="12"
     viewBox="0 0 24 24"
+    aria-label="opened"
   >
-    <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
+    <path
+      aria-label="opened"
+      d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
+    />
   </svg>
 );
 
