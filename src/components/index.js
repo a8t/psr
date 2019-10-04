@@ -1,3 +1,5 @@
-export mdxComponents from './mdxComponents';
-export Layout from './layout';
-export Link from './link';
+import mdxComponents from './mdxComponents';
+import Layout from './layout';
+import Link from './link';
+
+export { mdxComponents, Layout, Link };

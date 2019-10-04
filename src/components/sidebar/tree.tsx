@@ -5,6 +5,8 @@ import styled from 'styled-components';
 
 import OpenedSvg from '../images/opened';
 import ClosedSvg from '../images/closed';
+import { UrlTreeNode } from './types';
+import { WindowLocation } from '@reach/router';
 
 const TreeItem = styled.li`
   list-style: none;
@@ -61,7 +63,6 @@ const TreeItem = styled.li`
     border-left: 1px solid #ddd;
   }
 `;
-
 const Tree = ({
   onLinkClick,
   title,
@@ -69,6 +70,13 @@ const Tree = ({
   parentSlug,
   childNodes,
   location,
+}: {
+  onLinkClick: () => void;
+  title: string;
+  slug: string;
+  parentSlug: string;
+  childNodes: Array<UrlTreeNode>;
+  location: WindowLocation;
 }) => {
   const [collapsed, setCollapsed] = useState(false);
   const toggle = () => setCollapsed(!collapsed);
