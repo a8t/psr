@@ -48,7 +48,7 @@ function convertMdxEdgesIntoUrlTreeNodes(edges: Array<MdxEdge>) {
 }
 
 /**
- * Sorts SluggedData by length
+ * Sorts SluggedData by length ie how deep in the tree it is
  * @param sluggedData
  */
 function sortSluggedDataByLength(sluggedData: Array<SluggedDataNode>) {
@@ -73,6 +73,24 @@ function isolateItemAtIndex<T>(
   };
 }
 
+/**
+ * Replace an item in an array using a relace function
+ * @param array
+ * @param indexToReplace
+ * @param replacerFunction
+ */
+function replaceItemAtIndex<T>(
+  array: Array<T>,
+  indexToReplace: number,
+  replacerFunction: (T) => T
+) {
+  return array.map((currentItem, indexOfCurrentItem) =>
+    indexOfCurrentItem === indexToReplace
+      ? replacerFunction(currentItem)
+      : currentItem
+  );
+}
+
 export function treeify(edges: Array<MdxEdge>): UrlTreeNode {
   const sortedSluggedData = sortSluggedDataByLength(
     convertMdxEdgesIntoUrlTreeNodes(edges)
@@ -89,30 +107,20 @@ export function treeify(edges: Array<MdxEdge>): UrlTreeNode {
       return existingSlug.includes(slugHead);
     });
 
+    // if there's already an entry for our head, figure out where our item goes, recursively.
+    // ie chop the head off and go into the children and repeat this process
     if (indexOfHead > -1) {
-      const {
-        head,
-        itemAtIndex: itemToAddChildrenTo,
-        tail,
-      } = isolateItemAtIndex(accumulated, indexOfHead);
-
-      return [
-        ...head,
-        {
-          ...itemToAddChildrenTo,
-          childNodes: recursivelyRearrangeSluggedDataIntoTrees(
-            itemToAddChildrenTo.childNodes,
-            {
-              slug: `/${slugTail.join('/')}`,
-              title,
-              parentSlug: '/' + slugHead,
-            }
-          ),
-        },
-        ...tail,
-      ];
+      return replaceItemAtIndex(accumulated, indexOfHead, item => ({
+        ...item,
+        childNodes: recursivelyRearrangeSluggedDataIntoTrees(item.childNodes, {
+          parentSlug: '/' + slugHead,
+          slug: `/${slugTail.join('/')}`,
+          title,
+        }),
+      }));
     }
 
+    // if not, add an entry for this head
     return [
       ...accumulated,
       {
