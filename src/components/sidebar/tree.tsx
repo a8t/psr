@@ -108,14 +108,14 @@ const Tree = ({
 
       {!collapsed && !isLeaf && (
         <ul>
-          {childNodes.map(({ title, slug, parentSlug, childNodes }) => (
+          {childNodes.map(({ title, slug: childSlug, childNodes }) => (
             <Tree
               key={title}
               onLinkClick={onLinkClick}
               title={title}
-              slug={slug}
+              slug={childSlug}
               childNodes={childNodes}
-              parentSlug={parentSlug}
+              parentSlug={url}
               location={location}
             />
           ))}
