@@ -3,13 +3,25 @@ title: 'The Filipino-American War'
 metaTitle: 'PSR | The Filipino-American War'
 ---
 
+# The Handover of the Philippines from Spain to America
+
 When Intramuros was already completely surrounded by the U.S. naval and land troops, diplomatic negotiations were secretly conducted by Admiral Dewey and the Spanish governor-general through the Belgian consul. These negotiations led to the agreement of stating a mock battle to justify the turnover of Manila to the U.S. imperialists by the Spanish colonialists and were parallel to negotiations being held abroad towards the general settlement of the Spanish-American War through the mediation of the French government.
 
-On August 13, 1898, the mock battle of Manila was staged by the U.S. imperialists and the Spanish colonialists. After a few token shots were fired, the latter surrendered to the former. The U.S. imperialists made it a point to prevent Filipino troops from entering Intramuros. It was thus that the Filipino revolutionary forces were conclusively deprived of the victory that was rightfully theirs. From then on, however, hatred of the U.S. imperialism became more widespread among the Filipino masses and their patriotic troops.
+On August 13, 1898, the mock battle of Manila was staged by the U.S. imperialists and the Spanish colonialists. After a few token shots were fired, the latter surrendered to the former.
 
-The Philippine revolutionary government shifted its headquarters from Cavite to Malolos, Bulacan in September in anticipation of further U.S. imperialist aggression. Here the Malolos Congress was held to put out a constitution that had for its models bourgeois-democratic constitutions. During the same period, the U.S. imperialists kept on insisting in diplomatic terms that Filipino troops withdraw further from where they had been pushed. The U.S. aggressors maneuvered to occupy more territory around Manila.
+The U.S. imperialists made it a point to prevent Filipino troops from entering Intramuros. It was thus that the Filipino revolutionary forces were conclusively deprived of the victory that was rightfully theirs. From then on, however, hatred of the U.S. imperialism became more widespread among the Filipino masses and their patriotic troops.
 
-Attempts of the Aguinaldo government at diplomacy abroad to assert the sovereign rights of the Filipino people proved to be futile. On December 10, 1898, the Treaty of Paris was signed by the United States and Spain ceding the entire Philippines to the former at the price of \$20 million and guaranteeing the property and business rights of Spanish citizens in the archipelago. On December 21, U.S. President McKinley issued the “Proclamation of Benevolent Assimilation” to declare in sugar- coated terms a war of aggression against the Filipino people.
+The Philippine revolutionary government shifted its headquarters from Cavite to Malolos, Bulacan in September in anticipation of further U.S. imperialist aggression. Here the Malolos Congress was held to put out a constitution that had for its models bourgeois-democratic constitutions.
+
+During the same period, the U.S. imperialists kept on insisting in diplomatic terms that Filipino troops withdraw further from where they had been pushed. The U.S. aggressors maneuvered to occupy more territory around Manila.
+
+## The Treaty of Paris
+
+Attempts of the Aguinaldo government at diplomacy abroad to assert the sovereign rights of the Filipino people proved to be futile. On December 10, 1898, the Treaty of Paris was signed by the United States and Spain ceding the entire Philippines to the former at the price of \$20 million and guaranteeing the property and business rights of Spanish citizens in the archipelago.
+
+On December 21, U.S. President McKinley issued the “Proclamation of Benevolent Assimilation” to declare in sugar- coated terms a war of aggression against the Filipino people.
+
+# The Filipino-American War
 
 On February 4, 1899, the U.S. troops made a surprise attack on the Filipino revolutionary forces in the vicinity of Manila. In the ensuing battles in the city, at least 3,000 Filipino were butchered while only 250 U.S. troops fell. Thus, armed hostilities between U.S. imperialism and the Filipino people began. The Filipino people heroically stood up to wage a revolutionary war of national liberation.
 
