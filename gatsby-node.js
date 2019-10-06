@@ -29,6 +29,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const parent = getNode(node.parent);
 
     createNodeField({
+      name: `originalPath`,
+      node,
+      value: `/${
+        parent.name === 'index'
+          ? parent.relativeDirectory
+          : [parent.relativeDirectory, parent.name].filter(Boolean).join('/')
+      }`,
+    });
+
+    createNodeField({
       name: `path`,
       node,
       value: `/${
@@ -65,8 +75,8 @@ exports.createPages = async ({ graphql, actions }) => {
               fields {
                 id
                 path
+                originalPath
               }
-              tableOfContents
             }
           }
         }

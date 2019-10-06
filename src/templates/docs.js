@@ -17,26 +17,15 @@ export default function MDXRuntime({ data, location }) {
     },
   } = data;
 
-  const nav = allMdx.edges
-    .map(({ node }) => node.fields.url)
-    .filter(url => url !== '/')
-    .sort()
-    .map(url => {
-      if (url) {
-        const { node } = allMdx.edges.find(
-          ({ node }) => node.fields.url === url
-        );
-
-        return { title: node.fields.title, url: node.fields.url };
-      }
-    });
+  const { next, previous } = allMdx.edges.filter(
+    ({ node }) => node.fields.id === mdx.fields.id
+  )[0];
 
   // meta tags
   const { metaTitle, metaDescription } = mdx.frontmatter;
-  const canonicalUrl = `${config.gatsby.siteUrl}/${mdx.fields.url}`;
-
   const pageTitle = metaTitle || title;
   const pageDescription = metaDescription || description;
+  const canonicalUrl = `${config.gatsby.siteUrl}${mdx.fields.path}`;
 
   return (
     <Layout location={location}>
@@ -58,7 +47,7 @@ export default function MDXRuntime({ data, location }) {
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </main>
       <div className={'addPaddTopBottom'}>
-        <NextPrevious mdx={mdx} nav={nav} />
+        <NextPrevious next={next} previous={previous} />
       </div>
     </Layout>
   );
@@ -90,9 +79,22 @@ export const pageQuery = graphql`
         metaDescription
       }
     }
-    allMdx {
+    allMdx(sort: { fields: fields___originalPath }) {
       edges {
         node {
+          fields {
+            id
+            path
+            title
+          }
+        }
+        next {
+          fields {
+            path
+            title
+          }
+        }
+        previous {
           fields {
             path
             title
