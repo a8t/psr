@@ -77,7 +77,7 @@ const SidebarLayout = ({ className, location, onLinkClick }) => {
             onLinkClick={onLinkClick}
             title={title}
             slug={slug}
-            parentSlug=""
+            parentUrl=""
             childNodes={childNodes}
             location={location}
           />

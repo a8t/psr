@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import _ from 'lodash';
 import styled from 'styled-components';
@@ -28,7 +28,7 @@ const TreeItem = styled.li`
       line-height: 1.5;
       padding: 7px 10px 7px 7px;
 
-      &.active {
+      &.isActive {
         background-color: #e0cff1;
         color: #542683;
       }
@@ -63,36 +63,50 @@ const TreeItem = styled.li`
     border-left: 1px solid #ddd;
   }
 `;
+
 const Tree = ({
   onLinkClick,
   title,
   slug,
-  parentSlug,
+  parentUrl,
   childNodes,
   location,
 }: {
   onLinkClick: () => void;
   title: string;
   slug: string;
-  parentSlug: string;
+  parentUrl: string;
   childNodes: Array<UrlTreeNode>;
   location: WindowLocation;
 }) => {
-  const [collapsed, setCollapsed] = useState(false);
-  const toggle = () => setCollapsed(!collapsed);
+  // the url of the current node
+  const url = parentUrl + slug;
 
-  const url = parentSlug + slug;
+  // whether the current url will be highlighted as active
+  const isActive = location && location.pathname === url;
 
-  const active = location && location.pathname === url;
-
+  // whether this node is a leaf
   const isLeaf = childNodes.length === 0;
 
-  const calculatedClassName = `${isLeaf ? 'isLeaf' : ''}`;
+  // tree open state and effects
+  const shouldSectionBeOpenAutomatically =
+    isActive || location.pathname.includes(url);
+
+  const [open, setOpen] = useState(shouldSectionBeOpenAutomatically);
+  const toggle = () => setOpen(!open);
+
+  useEffect(() => {
+    setOpen(shouldSectionBeOpenAutomatically);
+  }, [location.pathname]);
 
   return (
-    <TreeItem className={calculatedClassName}>
+    <TreeItem className={`${isLeaf ? 'isLeaf' : ''}`}>
       <header>
-        <Link to={url} onClick={onLinkClick} className={active ? 'active' : ''}>
+        <Link
+          to={url}
+          onClick={onLinkClick}
+          className={isActive ? 'isActive' : ''}
+        >
           {title}
         </Link>
         {title && !isLeaf && (
@@ -101,12 +115,12 @@ const Tree = ({
             className="collapser"
             aria-label="toggle subtree"
           >
-            {collapsed ? <ClosedSvg /> : <OpenedSvg />}
+            {open ? <OpenedSvg /> : <ClosedSvg />}
           </button>
         )}
       </header>
 
-      {!collapsed && !isLeaf && (
+      {open && !isLeaf && (
         <ul>
           {childNodes.map(({ title, slug: childSlug, childNodes }) => (
             <Tree
@@ -115,7 +129,7 @@ const Tree = ({
               title={title}
               slug={childSlug}
               childNodes={childNodes}
-              parentSlug={url}
+              parentUrl={url}
               location={location}
             />
           ))}
