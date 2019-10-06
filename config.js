@@ -21,7 +21,8 @@ const config = {
   },
   siteMetadata: {
     title: 'Philippine Society and Revolution',
-    description: '',
+    description:
+      'An analysis of Philippine society, a summary of the basic problems of the Filipino people, and a discussion of the solutions.',
     ogImage: null,
     docsLocation: '',
     favicon: 'https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg',
