@@ -45,7 +45,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         parent.name === 'index'
           ? parent.relativeDirectory
           : [parent.relativeDirectory, parent.name].filter(Boolean).join('/')
-      }`.replace(/[0-9]+-/g, ''),
+      }`.replace(/\/[0-9]+-/g, '/'),
     });
 
     createNodeField({
