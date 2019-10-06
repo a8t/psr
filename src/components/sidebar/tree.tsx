@@ -67,30 +67,25 @@ const TreeItem = styled.li`
 const Tree = ({
   onLinkClick,
   title,
-  slug,
-  parentUrl,
+  path,
   childNodes,
   location,
 }: {
   onLinkClick: () => void;
   title: string;
-  slug: string;
-  parentUrl: string;
+  path: string;
   childNodes: Array<UrlTreeNode>;
   location: WindowLocation;
 }) => {
-  // the url of the current node
-  const url = parentUrl + slug;
-
   // whether the current url will be highlighted as active
-  const isActive = location && location.pathname === url;
+  const isActive = location && location.pathname === path;
 
   // whether this node is a leaf
   const isLeaf = childNodes.length === 0;
 
   // tree open state and effects
   const shouldSectionBeOpenAutomatically =
-    isActive || location.pathname.includes(url);
+    isActive || location.pathname.includes(path);
 
   const [open, setOpen] = useState(shouldSectionBeOpenAutomatically);
   const toggle = () => setOpen(!open);
@@ -103,7 +98,7 @@ const Tree = ({
     <TreeItem className={`${isLeaf ? 'isLeaf' : ''}`}>
       <header>
         <Link
-          to={url}
+          to={path}
           onClick={onLinkClick}
           className={isActive ? 'isActive' : ''}
         >
@@ -122,14 +117,13 @@ const Tree = ({
 
       {open && !isLeaf && (
         <ul>
-          {childNodes.map(({ title, slug: childSlug, childNodes }) => (
+          {childNodes.map(({ title, path, childNodes }) => (
             <Tree
               key={title}
               onLinkClick={onLinkClick}
               title={title}
-              slug={childSlug}
+              path={path}
               childNodes={childNodes}
-              parentUrl={url}
               location={location}
             />
           ))}

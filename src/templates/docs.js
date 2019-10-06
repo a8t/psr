@@ -18,22 +18,22 @@ export default function MDXRuntime({ data, location }) {
   } = data;
 
   const nav = allMdx.edges
-    .map(({ node }) => node.fields.slug)
-    .filter(slug => slug !== '/')
+    .map(({ node }) => node.fields.url)
+    .filter(url => url !== '/')
     .sort()
-    .map(slug => {
-      if (slug) {
+    .map(url => {
+      if (url) {
         const { node } = allMdx.edges.find(
-          ({ node }) => node.fields.slug === slug
+          ({ node }) => node.fields.url === url
         );
 
-        return { title: node.fields.title, url: node.fields.slug };
+        return { title: node.fields.title, url: node.fields.url };
       }
     });
 
   // meta tags
   const { metaTitle, metaDescription } = mdx.frontmatter;
-  const canonicalUrl = `${config.gatsby.siteUrl}/${mdx.fields.slug}`;
+  const canonicalUrl = `${config.gatsby.siteUrl}/${mdx.fields.url}`;
 
   const pageTitle = metaTitle || title;
   const pageDescription = metaDescription || description;
@@ -76,7 +76,7 @@ export const pageQuery = graphql`
       fields {
         id
         title
-        slug
+        path
       }
       body
       tableOfContents
@@ -94,7 +94,7 @@ export const pageQuery = graphql`
       edges {
         node {
           fields {
-            slug
+            path
             title
           }
         }

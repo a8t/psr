@@ -14,11 +14,11 @@ function selectField(
 }
 
 /**
- * Checks if an MdxEdge has a slug value of '/'
+ * Checks if an MdxEdge has a path value of '/'
  * @param edge The MdxEdge to check
  */
 function isNotIndex(edge: MdxEdge): boolean {
-  return selectField(edge, 'slug') !== '/';
+  return selectField(edge, 'path') !== '/';
 }
 
 /**
@@ -29,19 +29,18 @@ export function filterIndexIfRequired(edges: Array<MdxEdge>): Array<MdxEdge> {
   return config.sidebar.ignoreIndex ? edges.filter(isNotIndex) : edges;
 }
 
-type SluggedDataNode = MdxEdge['node']['fields'] & {
-  parentSlug: string;
-};
+type UrlNodeData = MdxEdge['node']['fields'];
 
 /**
  * Does what it says on the box. Map MdxEdges SluggdDataNodes
  * @param edges input edges
  */
-function convertMdxEdgesIntoUrlTreeNodes(edges: Array<MdxEdge>) {
+function convertMdxEdgesIntoUrlDataNodes(
+  edges: Array<MdxEdge>
+): Array<UrlNodeData> {
   return edges.map((edge: MdxEdge) => {
     return {
-      slug: selectField(edge, 'slug'),
-      parentSlug: '',
+      path: selectField(edge, 'path'),
       title: selectField(edge, 'title'),
     };
   });
@@ -51,9 +50,9 @@ function convertMdxEdgesIntoUrlTreeNodes(edges: Array<MdxEdge>) {
  * Sorts SluggedData by length ie how deep in the tree it is
  * @param sluggedData
  */
-function sortSluggedDataByLength(sluggedData: Array<SluggedDataNode>) {
-  return sluggedData.slice().sort(({ slug: slugA }, { slug: slugB }) => {
-    return slugA.split('/').length - slugB.split('/').length;
+function sortUrlNodeDataByLength(urlNodeData: Array<UrlNodeData>) {
+  return urlNodeData.slice().sort(({ path: pathA }, { path: pathB }) => {
+    return pathA.split('/').length - pathB.split('/').length;
   });
 }
 
@@ -82,7 +81,7 @@ function isolateItemAtIndex<T>(
 function replaceItemAtIndex<T>(
   array: Array<T>,
   indexToReplace: number,
-  replacerFunction: (T) => T
+  replacerFunction: (T: T) => T
 ) {
   return array.map((currentItem, indexOfCurrentItem) =>
     indexOfCurrentItem === indexToReplace
@@ -91,55 +90,58 @@ function replaceItemAtIndex<T>(
   );
 }
 
+const createUrlNode = ({ path, title, childNodes = [] }: UrlTreeNode) => ({
+  path,
+  title,
+  childNodes,
+});
+
+const findIndexOfPath = (
+  urlTreeNodes: Array<UrlTreeNode>,
+  searchPath: string
+): number =>
+  urlTreeNodes.findIndex(({ path }) => {
+    return path.includes(searchPath);
+  });
+
+const addNodeToTree = (
+  siblings: Array<UrlTreeNode>,
+  { path, title }: UrlNodeData,
+  depth = 1
+): Array<UrlTreeNode> => {
+  // find if the node's siblings has an entry for the head of the current slug at this depth
+  const [pathHead] = path.split('/').slice(depth, -1);
+  const indexOfHead = findIndexOfPath(siblings, pathHead);
+
+  // if a sibling does have the child we want, repeat the process inside the child
+  if (pathHead !== '' && indexOfHead > -1) {
+    return replaceItemAtIndex(
+      siblings,
+      indexOfHead,
+      ({ path: thisPath, title: thisTitle, childNodes }) =>
+        createUrlNode({
+          path: thisPath,
+          title: thisTitle,
+          childNodes: addNodeToTree(childNodes, { path, title }, depth + 1),
+        })
+    );
+  }
+  // if not, add the node as a sibling
+  return [...siblings, createUrlNode({ path, title, childNodes: [] })];
+};
+
 export function treeify(edges: Array<MdxEdge>): UrlTreeNode {
-  const sortedSluggedData = sortSluggedDataByLength(
-    convertMdxEdgesIntoUrlTreeNodes(edges)
+  // sort it first so that we place the ones closest to root first
+  const sortedUrlData = sortUrlNodeDataByLength(
+    convertMdxEdgesIntoUrlDataNodes(edges)
   );
 
-  const recursivelyRearrangeSluggedDataIntoTrees = (
-    accumulated: Array<UrlTreeNode>,
-    { slug, title, parentSlug }: SluggedDataNode
-  ): Array<UrlTreeNode> => {
-    const [slugHead, ...slugTail] = slug.split('/').slice(1);
-
-    // find if the accumulated data has an entry for the head of the current slug
-    const indexOfHead = accumulated.findIndex(({ slug: existingSlug }) => {
-      return existingSlug.includes(slugHead);
-    });
-
-    // if there's already an entry for our head, figure out where our item goes, recursively.
-    // ie chop the head off and go into the children and repeat this process
-    if (indexOfHead > -1) {
-      return replaceItemAtIndex(accumulated, indexOfHead, item => ({
-        ...item,
-        childNodes: recursivelyRearrangeSluggedDataIntoTrees(item.childNodes, {
-          parentSlug: '/' + slugHead,
-          slug: `/${slugTail.join('/')}`,
-          title,
-        }),
-      }));
-    }
-
-    // if not, add an entry for this head
-    return [
-      ...accumulated,
-      {
-        slug,
-        parentSlug,
-        title,
-        childNodes: [],
-      },
-    ];
-  };
-
   return {
-    slug: '',
-    parentSlug: '',
+    path: '',
     title: '',
-    childNodes: sortedSluggedData.reduce(
-      recursivelyRearrangeSluggedDataIntoTrees,
-      []
-    ),
+    childNodes: sortedUrlData.reduce((previousTree, currentUrlData) => {
+      return addNodeToTree(previousTree, currentUrlData, 1);
+    }, []),
   };
 }
 
@@ -150,7 +152,7 @@ export function sortTreeData(tree: UrlTreeNode): UrlTreeNode {
 
   const sortedChildNodes = tree.childNodes
     .slice()
-    .sort(({ slug: slugA }, { slug: slugB }) => slugA.localeCompare(slugB));
+    .sort(({ path: pathA }, { path: pathB }) => pathA.localeCompare(pathB));
 
   return {
     ...tree,
@@ -159,8 +161,8 @@ export function sortTreeData(tree: UrlTreeNode): UrlTreeNode {
         ...rest,
         childNodes: childNodes
           .slice()
-          .sort(({ slug: slugA }, { slug: slugB }) =>
-            slugA.localeCompare(slugB)
+          .sort(({ path: pathA }, { path: pathB }) =>
+            pathA.localeCompare(pathB)
           ),
       };
     }),

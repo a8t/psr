@@ -65,7 +65,7 @@ const query = graphql`
       edges {
         node {
           fields {
-            slug
+            path
           }
           tableOfContents
         }
@@ -78,7 +78,7 @@ const SidebarLayout = ({ location, className }) => {
   const { allMdx } = useStaticQuery(query);
 
   const navItems = allMdx.edges
-    .filter(({ node }) => node.fields.slug === location.pathname)
+    .filter(({ node }) => node.fields.path === location.pathname)
     .map(({ node }) => {
       if (node.tableOfContents.items) {
         return node.tableOfContents.items.map(({ title, url }) => (

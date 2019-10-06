@@ -1,15 +1,14 @@
 export interface MdxEdge {
   node: {
     fields: {
-      slug: string;
+      path: string;
       title: string;
     };
   };
 }
 
 export interface UrlTreeNode {
-  slug: string;
-  parentSlug: string;
+  path: string;
   title: string;
   childNodes: Array<UrlTreeNode>;
 }

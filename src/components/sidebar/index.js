@@ -49,11 +49,11 @@ const Divider = styled(props => (
 
 const query = graphql`
   query {
-    allMdx {
+    allMdx(sort: { fields: fileAbsolutePath, order: ASC }) {
       edges {
         node {
           fields {
-            slug
+            path
             title
           }
         }
@@ -65,19 +65,19 @@ const query = graphql`
 const SidebarLayout = ({ className, location, onLinkClick }) => {
   const { allMdx } = useStaticQuery(query);
 
-  const { title, urlPathSegment, childNodes } = sortTreeData(
-    treeify(filterIndexIfRequired(allMdx.edges))
+  const { title, urlPathSegment, childNodes } = treeify(
+    filterIndexIfRequired(allMdx.edges)
   );
+
   return (
     <Sidebar className={className}>
       <ul>
-        {childNodes.map(({ title, slug, childNodes }) => (
+        {childNodes.map(({ title, path, childNodes }) => (
           <Tree
             key={title}
             onLinkClick={onLinkClick}
             title={title}
-            slug={slug}
-            parentUrl=""
+            path={path}
             childNodes={childNodes}
             location={location}
           />

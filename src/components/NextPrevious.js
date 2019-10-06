@@ -5,7 +5,7 @@ class NextPrevious extends React.Component {
     const { mdx, nav } = this.props;
     let currentIndex;
     const currentPaginationInfo = nav.map((el, index) => {
-      if (el && el.url === mdx.fields.slug) {
+      if (el && el.url === mdx.fields.path) {
         currentIndex = index;
       }
     });
