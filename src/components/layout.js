@@ -24,7 +24,6 @@ const Content = styled.main`
   padding-top: 3rem;
   max-width: 45em;
   width: 100%;
-  min-width: 30em;
   margin-right: auto;
 
   @media only screen and (max-width: 1023px) {
